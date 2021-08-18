@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import Navi from "./Navi";
+
 class Header extends Component {
   constructor(props) {
     // use super so we can access "this"
@@ -7,7 +9,11 @@ class Header extends Component {
   }
 
   render() {
-    return <div className="header-container">Header</div>;
+    return (
+      <div className="header-container">
+        <Navi />
+      </div>
+    );
   }
 }
 
