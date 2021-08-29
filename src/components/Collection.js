@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Route, Link } from "react-router-dom";
 import "./Collection.css";
 
 class Collection extends Component {
@@ -11,9 +11,9 @@ class Collection extends Component {
   render() {
     return (
       <div className="collection-container">
-        <div className="collection egypt"></div>
-        <div className="collection greece"></div>
-        <div className="collection asia"></div>
+        <Link to="/egypt" className="collection egypt"></Link>
+        <Link to="/greece" className="collection greece"></Link>
+        <Link to="/asia" className="collection asia"></Link>
       </div>
     );
   }
