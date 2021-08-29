@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 
-import "./Footer.css";
+import "./Menu.css";
 
-class Footer extends Component {
+class Menu extends Component {
   constructor(props) {
     // use super so we can access "this"
     super(props);
   }
 
   render() {
-    return <div className="footer-container"></div>;
+    return <div className="menu-container"></div>;
   }
 }
 
-export default Footer;
+export default Menu;
