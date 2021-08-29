@@ -45,5 +45,15 @@
   margin-bottom: 50px;
   margin-left: 50px;
   color: white;
-  border: 1px solid white;
+  text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f,
+    5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+  font-size: 1.4em;
+  background-color: rgba(35, 35, 35, 0.3);
+}
+
+.textE a {
+  color: white;
+}
+.textE :hover {
+  color: black;
 }

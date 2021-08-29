@@ -45,5 +45,7 @@
   align-content: center;
   font-size: 5em;
   color: goldenrod;
-  text-shadow: 2px 2px 2px black;
+
+  text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f,
+    5px 5px 10px rgba(173, 16, 16, 0.4), -5px -5px 10px rgba(165, 29, 29, 0.4);
 }
