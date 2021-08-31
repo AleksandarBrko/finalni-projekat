@@ -10,5 +10,22 @@
 .collection {
   width: 30%;
   height: 400px;
-  border: 1px solid black;
+  
+}
+
+.collection.egypt{
+  background-image: url(images/collectionBackgroundEgypt.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.collection.greece{
+  background-image: url(images/collectionBackgroundGreece.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.collection.asia{
+  background-image: url(images/collectionBackgroundAsia.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
