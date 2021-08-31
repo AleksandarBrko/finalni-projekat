@@ -2,15 +2,15 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 100px;
 }
 .mainEvent {
   width: 58%;
   margin-right: 50px;
   background-image: url(images/mainPicture.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   position: relative;
+  border: 1px solid #2d5f5d;
 }
 .mainEvent a {
   position: absolute;
@@ -19,6 +19,15 @@
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+.announce {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
+.ann2 {
+  font-size: 2em;
 }
 
 .sideEvent {
@@ -32,13 +41,12 @@
 .small-event {
   width: 100%;
   height: 230px;
-  
-  
+  border: 1px solid #2d5f5d;
 }
-.small-event.first-image{
+.small-event.first-image {
   background-image: url(images/sidePictureGreece.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   position: relative;
 }
 .small-event.first-image a {
@@ -53,7 +61,7 @@
   margin-top: 20px;
   background-image: url(images/sidePictureChina.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   position: relative;
 }
 .small-event.second-image a {

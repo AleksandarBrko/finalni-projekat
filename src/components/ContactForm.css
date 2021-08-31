@@ -36,7 +36,7 @@ form {
 .info {
   display: block;
   
-  height: 150px;
+  
   padding-left: 50px;
 }
 
@@ -79,6 +79,10 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.info.email a{
+  text-decoration: none;
+  color: white;
 }
 .info h3 {
   font-size: 1.5em;

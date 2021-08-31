@@ -14,6 +14,7 @@ class Main extends Component {
     return (
       <div className="main-container">
         <Header />
+        <div className="eventTitle">NEWS</div>
         <Events />
       </div>
     );

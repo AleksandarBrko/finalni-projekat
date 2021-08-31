@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import Main from "./components/Main";
 import Collection from "./components/Collection";
+import CollectionTitle from "./components/CollectionTitle";
 import AboutUs from "./components/AboutUs";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
@@ -26,6 +27,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/">
               <Main />
+              <CollectionTitle />
               <Collection />
               <AboutUs />
               <ContactForm />

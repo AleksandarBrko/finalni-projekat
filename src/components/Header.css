@@ -4,10 +4,15 @@
   justify-content: space-between;
 }
 .maintitle {
+  display: flex;
   margin-top: 50px;
   margin-bottom: 0;
-  color: goldenrod;
-  padding-left:50px ;
+  color: #babf4e;
+  text-shadow: 1px 1px yellow;
+  padding-left: 50px;
+}
+.maintitle img{
+  width: 100px;
   
 }
 
@@ -18,13 +23,15 @@
   margin-top: 5px;
   margin-right: 50px;
   justify-content: center;
+  
 }
 .log {
   padding-right: 25px;
-  border-right: 1px solid black;
+  border-right: 1px solid goldenrod;;
 }
 .log a {
   text-decoration: none;
+  color:goldenrod;
 }
 
 .reg {
@@ -33,4 +40,5 @@
 
 .reg a {
   text-decoration: none;
+  color:goldenrod;
 }

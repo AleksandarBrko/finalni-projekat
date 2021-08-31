@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import "./Header.css";
 import Menu from "./Menu";
+import PantheonIcon from "./icons/pantheon.png";
 
 class Header extends Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class Header extends Component {
     return (
       <div className="header-container">
         <div className="maintitle">
+          <img src={PantheonIcon} />
           <h1>The Museum of Ancient History</h1>
         </div>
         <div className="registration">
