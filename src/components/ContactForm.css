@@ -1,8 +1,85 @@
-.contactform-container{
-    width: 100%;
-    margin-top: 100px;
+.contactform-container {
+  width: 100%;
+  margin-top: 100px;
+  color: white;
+  background-color: #265077;
 }
 
-.contactForm-title{
-    text-align: center;
+.contactForm-title {
+  text-align: center;
+}
+.section {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.contForm {
+  width: 30%;
+
+  
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.contactForm-info {
+  display: flex;
+  flex-direction: column;
+
+  width: 30%;
+}
+.info {
+  display: block;
+  
+  height: 150px;
+  padding-left: 50px;
+}
+
+.nameInput {
+  display: flex;
+  flex-direction: column;
+
+  width: 49%;
+  height: 100px;
+  font-size: 2em;
+}
+.nameInput input {
+  height: 2.75em;
+}
+
+.emailInput {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  font-size: 2em;
+}
+.emailInput input {
+  height: 2.75em;
+}
+
+.fieldInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 2em;
+  list-style-type: none;
+}
+.sendMessage {
+  list-style-type: none;
+}
+
+.info.email {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info h3 {
+  font-size: 1.5em;
 }
