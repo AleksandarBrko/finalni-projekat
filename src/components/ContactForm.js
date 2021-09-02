@@ -6,6 +6,10 @@ class ContactForm extends Component {
   constructor(props) {
     // use super so we can access "this"
     super(props);
+    this.happy = this.happy.bind(this);
+  }
+  happy() {
+    alert("You have succesfully sent a message. Thank you!");
   }
 
   render() {
@@ -29,11 +33,11 @@ class ContactForm extends Component {
                 <label for="message">Message</label>
                 <textarea name="message" id="message" rows="6" />
               </div>
-              <div className="sendMessage">
+              <di className="sendMessage">
                 <li>
-                  <input type="submit" value="Send message" />
+                  <button onClick={this.happy}>Send message</button>
                 </li>
-              </div>
+              </di>
             </form>
           </div>
           <div className="contactForm-info">

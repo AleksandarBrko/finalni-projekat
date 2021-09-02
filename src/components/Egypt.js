@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 
 import "./Egypt.css";
+import ApiCollection from "./ApiCollection.js";
 
 class Egypt extends Component {
   constructor(props) {
@@ -27,7 +28,6 @@ class Egypt extends Component {
               <option value="3">Asia</option>
             </select>
           </div>
-
           <div className="filterCollection">
             <div className="collectionLabel">COLLECTION</div>
             <select class="form-select" aria-label="Default select example">
@@ -36,6 +36,7 @@ class Egypt extends Component {
               <option value="3">CollectionThree</option>
             </select>
           </div>
+          <ApiCollection />
         </div>
       </div>
     );
