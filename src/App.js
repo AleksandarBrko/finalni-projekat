@@ -30,7 +30,9 @@ class App extends Component {
               <CollectionTitle />
               <Collection />
               <AboutUs />
+              <hr />
               <ContactForm />
+              <hr />
               <Footer />
             </Route>
             <Route path="/login"></Route>

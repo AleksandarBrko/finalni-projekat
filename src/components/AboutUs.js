@@ -13,15 +13,11 @@ class AboutUs extends Component {
       <div className="aboutus-container">
         <h2>ABOUT US</h2>
         <div className="aboutus-text">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          The Museum was made for explorers and adventurers—it was made for
+          people like YOU, with a passion for science and a love of discovery.
+          Your support funds groundbreaking research and remarkable education
+          programs. And it ensures that our doors stay open for explorers of
+          every age.
         </div>
       </div>
     );

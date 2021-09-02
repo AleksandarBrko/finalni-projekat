@@ -2,7 +2,6 @@
   width: 100%;
   margin-top: 100px;
   color: white;
-  background-color: #265077;
 }
 
 .contactForm-title {
@@ -16,8 +15,6 @@
 
 .contForm {
   width: 30%;
-
-  
 }
 
 form {
@@ -25,6 +22,7 @@ form {
   flex-wrap: wrap;
   margin-top: 20px;
   justify-content: space-between;
+  color: white;
 }
 
 .contactForm-info {
@@ -35,8 +33,7 @@ form {
 }
 .info {
   display: block;
-  
-  
+
   padding-left: 50px;
 }
 
@@ -74,16 +71,28 @@ form {
   list-style-type: none;
 }
 
+.sendMessage input {
+  color: white;
+}
+
 .info.email {
   display: block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.info.email a{
+.info.email a {
   text-decoration: none;
   color: white;
 }
 .info h3 {
   font-size: 1.5em;
+}
+
+form input {
+  background-color: #265077;
+}
+
+form textarea {
+  background-color: #265077;
 }

@@ -29,11 +29,11 @@ class ContactForm extends Component {
                 <label for="message">Message</label>
                 <textarea name="message" id="message" rows="6" />
               </div>
-              <ul className="sendMessage">
+              <div className="sendMessage">
                 <li>
                   <input type="submit" value="Send message" />
                 </li>
-              </ul>
+              </div>
             </form>
           </div>
           <div className="contactForm-info">

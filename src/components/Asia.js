@@ -9,7 +9,35 @@ class Asia extends Component {
   }
 
   render() {
-    return <div className="asia-container"></div>;
+    return (
+      <div className="asia-container">
+        <div className="headerAsia">
+          <div className="titleAsia">
+            <h1>ASIA</h1>
+          </div>
+          <div className="headerImgAsia"></div>
+        </div>
+        <div className="filterAsia">
+          <div className="filterCategory">
+            <div className="categoryLabel">CATEGORY</div>
+            <select class="form-select" aria-label="Default select example">
+              <option value="1">Asia</option>
+              <option value="2">Egypt</option>
+              <option value="3">Greece</option>
+            </select>
+          </div>
+
+          <div className="filterCollection">
+            <div className="collectionLabel">COLLECTION</div>
+            <select class="form-select" aria-label="Default select example">
+              <option value="1">CollectionOne</option>
+              <option value="2">CollectionTwo</option>
+              <option value="3">CollectionThree</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 

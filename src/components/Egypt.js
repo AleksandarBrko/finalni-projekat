@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Button } from "react-bootstrap";
 
 import "./Egypt.css";
 
@@ -9,7 +10,35 @@ class Egypt extends Component {
   }
 
   render() {
-    return <div className="egypt-container"></div>;
+    return (
+      <div className="egypt-container">
+        <div className="headerEgypt">
+          <div className="titleEgypt">
+            <h1>EGYPT</h1>
+          </div>
+          <div className="headerImgEgypt"></div>
+        </div>
+        <div className="filterEgypt">
+          <div className="filterCategory">
+            <div className="categoryLabel">CATEGORY</div>
+            <select class="form-select" aria-label="Default select example">
+              <option value="1">Egypt</option>
+              <option value="2">Greece</option>
+              <option value="3">Asia</option>
+            </select>
+          </div>
+
+          <div className="filterCollection">
+            <div className="collectionLabel">COLLECTION</div>
+            <select class="form-select" aria-label="Default select example">
+              <option value="1">CollectionOne</option>
+              <option value="2">CollectionTwo</option>
+              <option value="3">CollectionThree</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 

@@ -34,7 +34,7 @@ class Footer extends Component {
           </div>
 
           <div className="copyright">
-            <p>© The museum of history</p>
+            <p>© The museum of ancient history</p>
           </div>
         </div>
       </div>
