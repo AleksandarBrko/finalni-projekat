@@ -1,0 +1,26 @@
+.apiList-container {
+  width: 90%;
+  margin: 50px auto;
+  color: white;
+}
+.list-row {
+  display: flex;
+}
+.row-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 25%;
+  height: 50px;
+  border: 1px solid white;
+}
+
+.row-item.images {
+  padding-left: 10px;
+}
+
+.row-item.images a {
+  color: white;
+  text-decoration: none;
+}

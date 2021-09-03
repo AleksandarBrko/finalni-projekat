@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import "./Greece.css";
+import ApiCollectionGreece from "./ApiCollectionGreece.js";
 
 class Greece extends Component {
   constructor(props) {
@@ -9,8 +10,9 @@ class Greece extends Component {
   }
 
   render() {
-    return <div className="greece-container">
-      <div className="headerGreece">
+    return (
+      <div className="greece-container">
+        <div className="headerGreece">
           <div className="titleGreece">
             <h1>GREECE</h1>
           </div>
@@ -19,7 +21,7 @@ class Greece extends Component {
         <div className="filterGreece">
           <div className="filterCategory">
             <div className="categoryLabel">CATEGORY</div>
-            <select class="form-select" aria-label="Default select example">
+            <select className="form-select" aria-label="Default select example">
               <option value="1">Greece</option>
               <option value="2">Egypt</option>
               <option value="3">Greece</option>
@@ -28,14 +30,16 @@ class Greece extends Component {
 
           <div className="filterCollection">
             <div className="collectionLabel">COLLECTION</div>
-            <select class="form-select" aria-label="Default select example">
+            <select className="form-select" aria-label="Default select example">
               <option value="1">CollectionOne</option>
               <option value="2">CollectionTwo</option>
               <option value="3">CollectionThree</option>
             </select>
           </div>
         </div>
-    </div>;
+        <ApiCollectionGreece />
+      </div>
+    );
   }
 }
 

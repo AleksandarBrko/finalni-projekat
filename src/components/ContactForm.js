@@ -33,11 +33,11 @@ class ContactForm extends Component {
                 <label for="message">Message</label>
                 <textarea name="message" id="message" rows="6" />
               </div>
-              <di className="sendMessage">
+              <div className="sendMessage">
                 <li>
                   <button onClick={this.happy}>Send message</button>
                 </li>
-              </di>
+              </div>
             </form>
           </div>
           <div className="contactForm-info">
