@@ -10,7 +10,6 @@ class ApiCollectionEgypt extends Component {
       apiError: null,
       isLoaded: false,
       data: [],
-      aca: 3,
     };
   }
   componentDidMount() {
@@ -41,10 +40,17 @@ class ApiCollectionEgypt extends Component {
         current: this.state.current - 1,
       });
     };
-    const nextPage=()=>{
+    console.log(this.state.current);
+    const nextPage = () => {
       this.setState({
-        current:this.state.current +1,
-      })
+        current: this.state.current + 1,
+      });
+      console.log(this.state.current);
+    };
+    if (this.state.current === 1) {
+      if (this.state.data.slice(0, 11)) {
+        return this.state.data;
+      }
     }
 
     if (this.state.apiError) {
@@ -60,8 +66,8 @@ class ApiCollectionEgypt extends Component {
             </button>
 
             <div className="current-page">{this.state.current}</div>
-            <button onClick={nextPage} className="next-page">next
-              
+            <button onClick={nextPage} className="next-page">
+              next
             </button>
           </div>
           <div className="list-row headRow">

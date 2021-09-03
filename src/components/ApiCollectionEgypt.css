@@ -32,3 +32,17 @@
   color: goldenrod;
   border: 1px solid goldenrod;
 }
+.pagination {
+  display: flex;
+  width: 10%;
+  justify-content: center;
+  margin: 50px auto;
+}
+
+.current-page {
+  display: flex;
+  justify-content: center;
+  border: 1px solid goldenrod;
+  width: 50px;
+  margin: 0 10px;
+}
