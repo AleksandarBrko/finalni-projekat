@@ -10,13 +10,8 @@ class ApiCollectionEgypt extends Component {
       apiError: null,
       isLoaded: false,
       data: [],
-      aca: 3
+      aca: 3,
     };
-    this.aca = {
-      auto: "fiat",
-      boja: "crvena",
-      broj: 3
-    }
   }
   componentDidMount() {
     fetch(
@@ -30,8 +25,6 @@ class ApiCollectionEgypt extends Component {
             data: result.data,
           });
         },
-        
-
 
         (error) => {
           this.setState({
@@ -45,33 +38,37 @@ class ApiCollectionEgypt extends Component {
   render() {
     const previousPage = () => {
       this.setState({
-        current: this.state.current - 1
-      })
-      
-
+        current: this.state.current - 1,
+      });
     };
+    const nextPage=()=>{
+      this.setState({
+        current:this.state.current +1,
+      })
+    }
 
     if (this.state.apiError) {
       return <div>Error: {this.state.apiError.message}</div>;
     } else if (!this.state.isLoaded) {
-      return <div className ="api-loading">Loading...</div>;
+      return <div className="api-loading">Loading...</div>;
     } else {
       return (
         <div className="apiList-container">
           <div className="pagination">
-            <div onClick={previousPage} className="previous-page" >
+            <button onClick={previousPage} className="previous-page">
               prev
-            </div>
-            <div className="current-page"></div>
-            <div className="next-page">
-              <a href="">next</a>
-            </div>
+            </button>
+
+            <div className="current-page">{this.state.current}</div>
+            <button onClick={nextPage} className="next-page">next
+              
+            </button>
           </div>
-          <div className="list-row">
-            <div className="row-item">Title</div>
-            <div className="row-item"></div>
-            <div className="row-item"></div>
-            <div className="row-item images"></div>
+          <div className="list-row headRow">
+            <div className="row-item headRow">Title</div>
+            <div className="row-item headRow">Collection</div>
+            <div className="row-item headRow">Type</div>
+            <div className="row-item imagesRow">Image</div>
           </div>
           {this.state.data.map((item) => (
             <div className="list-row">

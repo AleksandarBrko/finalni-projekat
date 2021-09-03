@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import "./Header.css";
-import Menu from "./Menu";
+import Menu from "./Menu.js";
 import PantheonIcon from "./icons/pantheon.png";
 
 class Header extends Component {

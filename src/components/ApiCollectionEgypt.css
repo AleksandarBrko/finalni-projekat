@@ -16,11 +16,19 @@
   border: 1px solid white;
 }
 
-.row-item.images {
+.row-item.imagesRow {
   padding-left: 10px;
+  font-size: 2em;
+  color: goldenrod;
+  border: 1px solid goldenrod;
 }
 
 .row-item.images a {
   color: white;
   text-decoration: none;
+}
+.row-item.headRow {
+  font-size: 2em;
+  color: goldenrod;
+  border: 1px solid goldenrod;
 }
