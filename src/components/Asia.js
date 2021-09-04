@@ -4,11 +4,6 @@ import "./Asia.css";
 import ApiCollectionAsia from "./ApiCollectionAsia.js";
 
 class Asia extends Component {
-  constructor(props) {
-    // use super so we can access "this"
-    super(props);
-  }
-
   render() {
     return (
       <div className="asia-container">

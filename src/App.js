@@ -7,6 +7,7 @@ import Collection from "./components/Collection";
 import CollectionTitle from "./components/CollectionTitle";
 import AboutUs from "./components/AboutUs";
 import ContactForm from "./components/ContactForm";
+import Greeting from "./components/sideComponents/Greeting";
 import Footer from "./components/Footer";
 import Egypt from "./components/Egypt";
 import Greece from "./components/Greece";
@@ -37,6 +38,9 @@ class App extends Component {
             </Route>
             <Route path="/login"></Route>
             <Route path="/register"></Route>
+            <Route path="/greeting">
+              <Greeting />
+            </Route>
             <Route path="/egypt">
               <Egypt />
             </Route>

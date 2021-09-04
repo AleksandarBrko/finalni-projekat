@@ -47,10 +47,9 @@ class ApiCollectionEgypt extends Component {
       });
       console.log(this.state.current);
     };
+
     if (this.state.current === 1) {
-      if (this.state.data.slice(0, 11)) {
-        return this.state.data;
-      }
+      return this.state.data.slice(0, 11);
     }
 
     if (this.state.apiError) {
@@ -72,14 +71,14 @@ class ApiCollectionEgypt extends Component {
           </div>
           <div className="list-row headRow">
             <div className="row-item headRow">Title</div>
-            <div className="row-item headRow">Collection</div>
-            <div className="row-item headRow">Type</div>
+            <div className="row-item headRow second">Collection</div>
+            <div className="row-item headRow third">Type</div>
             <div className="row-item imagesRow">Image</div>
           </div>
           {this.state.data.map((item) => (
             <div className="list-row">
               <div className="row-item title">{item.title}</div>
-              <div className="row-item">{item.collection}</div>
+              <div className="row-item second">{item.collection}</div>
               <div className="row-item type">{item.type}</div>
               {/* Ukoliko nema slika, da prikaze samo prazan div i da ne pukne API */}
               {item.images !== null ? (

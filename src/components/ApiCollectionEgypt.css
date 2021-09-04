@@ -14,6 +14,7 @@
   width: 25%;
   height: 50px;
   border: 1px solid white;
+  overflow: hidden;
 }
 
 .row-item.imagesRow {
@@ -45,4 +46,36 @@
   border: 1px solid goldenrod;
   width: 50px;
   margin: 0 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .list-row {
+    width: 100%;
+  }
+  .row-item.title {
+    width: 50%;
+    font-size: 15px;
+  }
+  .row-item.images {
+    width: 50%;
+    font-size: 8px;
+  }
+  .row-item.second {
+    display: none;
+  }
+  .row-item.type {
+    display: none;
+  }
+  .row-item.headRow.second {
+    display: none;
+  }
+  .row-item.headRow.third {
+    display: none;
+  }
+  .row-item.headRow {
+    width: 50%;
+  }
+  .row-item.imagesRow {
+    width: 50%;
+  }
 }

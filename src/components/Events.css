@@ -1,9 +1,9 @@
 .events-container {
   display: flex;
-  justify-content: space-between;
+
   width: 100%;
 }
-.mainEvent {
+.main-event {
   width: 58%;
   margin-right: 50px;
   background-image: url(images/mainPicture.jpg);
@@ -12,7 +12,7 @@
   position: relative;
   border: 1px solid #2d5f5d;
 }
-.mainEvent a {
+.main-event a {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -30,7 +30,7 @@
   font-size: 2em;
 }
 
-.sideEvent {
+.side-event {
   display: flex;
   flex-direction: column;
   width: 37%;
@@ -71,4 +71,28 @@
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .events-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+  }
+
+  .main-event {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 230px;
+  }
+  .side-event {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .ann1{
+    display: flex;
+    justify-content: center;
+    
+  }
 }

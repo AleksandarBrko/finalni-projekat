@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import "./ContactForm.css";
 
@@ -6,24 +7,20 @@ class ContactForm extends Component {
   constructor(props) {
     // use super so we can access "this"
     super(props);
-    this.happy = this.happy.bind(this);
-  }
-  happy() {
-    alert("You have succesfully sent a message. Thank you!");
   }
 
   render() {
     return (
       <div className="contactform-container">
         <div className="contactForm-title">
-          <h2>CONTACT FORM</h2>
+          <h2>CONTACT</h2>
         </div>
         <div className="section">
           <div className="contForm">
             <form name="contact" method="POST" action="sucess">
               <div className="nameInput">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" />
+                <input type="text" name="name" id="name " />
               </div>
               <div className="emailInput">
                 <label for="email">Email</label>
@@ -35,11 +32,17 @@ class ContactForm extends Component {
               </div>
               <div className="sendMessage">
                 <li>
-                  <button onClick={this.happy}>Send message</button>
+                  <Link to="/greeting">
+                    <button className="send-message">Send message</button>
+                  </Link>
                 </li>
               </div>
             </form>
           </div>
+          <div className="hr">
+            <hr />
+          </div>
+
           <div className="contactForm-info">
             <div className="info email">
               <h3>Email</h3>

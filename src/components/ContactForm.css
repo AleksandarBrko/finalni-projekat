@@ -55,7 +55,6 @@ form {
   flex-direction: column;
   width: 49%;
   font-size: 2em;
-  
 }
 .emailInput input {
   height: 2.75em;
@@ -69,9 +68,8 @@ form {
   margin-top: 20px;
   font-size: 2em;
   list-style-type: none;
-  
 }
-.fieldInput textarea{
+.fieldInput textarea {
   color: white;
 }
 .sendMessage {
@@ -103,4 +101,28 @@ form input {
 
 form textarea {
   background-color: #265077;
+}
+
+@media only screen and (max-width: 600px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .contForm {
+    width: 100%;
+  }
+
+  .contactForm-info {
+    width: 100%;
+  }
+  .hr hr {
+    border: 1px solid white;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .hr hr {
+    display: none;
+  }
 }
