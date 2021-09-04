@@ -7,9 +7,9 @@
   display: flex;
   margin-top: 50px;
   margin-bottom: 0;
-  color: #babf4e;
+  color: goldenrod;
   text-shadow: 1px 1px yellow;
-  padding-left: 50px;
+  
 }
 .maintitle img {
   width: 100px;

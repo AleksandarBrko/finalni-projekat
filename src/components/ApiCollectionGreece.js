@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./ApiCollectionGreece.css";
+import "./ApiCollection.css";
 
 class ApiCollectionGreece extends Component {
   constructor(props) {
@@ -66,20 +66,16 @@ class ApiCollectionGreece extends Component {
     } else {
       return (
         <div className="apiList-container">
-          <div className="pagination">
-            <button onClick={previousPage} className="previous-page">
-              prev
-            </button>
-
-            <div className="current-page">{this.state.current}</div>
-            <button onClick={nextPage} className="next-page">
-              next
-            </button>
+          <div className="list-row headRow">
+            <div className="row-item headRow">Title</div>
+            <div className="row-item headRow second">Collection</div>
+            <div className="row-item headRow third">Type</div>
+            <div className="row-item imagesRow">Image</div>
           </div>
           {this.state.pageList.map((item) => (
-            <div className="list-row">
+            <div className="list-row data">
               <div className="row-item title">{item.title}</div>
-              <div className="row-item">{item.collection}</div>
+              <div className="row-item second">{item.collection}</div>
               <div className="row-item type">{item.type}</div>
               {/* Ukoliko nema slika, da prikaze samo prazan div i da ne pukne API */}
               {item.images !== null ? (
@@ -91,6 +87,16 @@ class ApiCollectionGreece extends Component {
               )}
             </div>
           ))}
+          <div className="pagination">
+            <button onClick={previousPage} className="previous-page">
+              prev
+            </button>
+
+            <div className="current-page">{this.state.current}</div>
+            <button onClick={nextPage} className="next-page">
+              next
+            </button>
+          </div>
         </div>
       );
     }

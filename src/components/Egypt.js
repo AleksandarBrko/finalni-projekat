@@ -1,25 +1,23 @@
 import React, { Component } from "react";
-import { Button } from "react-bootstrap";
 
 import "./Egypt.css";
 import ApiCollectionEgypt from "./ApiCollectionEgypt.js";
+import Footer from "./Footer";
+import Header from "./Header";
 
 class Egypt extends Component {
-  constructor(props) {
-    // use super so we can access "this"
-    super(props);
-  }
-
   render() {
     return (
       <div className="egypt-container">
-        <div className="headerEgypt">
-          <div className="titleEgypt">
+        <Header/>
+        <hr/>
+        <div className="header-culture">
+          <div className="title-culture">
             <h1>EGYPT</h1>
           </div>
           <div className="header-img-egypt"></div>
         </div>
-        <div className="filter-egypt">
+        <div className="filter-culture">
           <div className="filter-collection">
             <div className="collection-label">COLLECTION</div>
             <select className="form-select" aria-label="Default select example">
@@ -38,6 +36,8 @@ class Egypt extends Component {
           </div>
         </div>
         <ApiCollectionEgypt />
+        <hr/>
+        <Footer />
       </div>
     );
   }

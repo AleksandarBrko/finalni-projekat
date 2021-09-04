@@ -2,12 +2,7 @@
   width: 100%;
 }
 
-.headerAsia {
-  text-align: center;
-  font-size: 2em;
-  color: goldenrod;
-}
-.headerImgAsia {
+.headerImg-asia {
   margin: 0 auto;
   width: 80%;
   height: 400px;
@@ -15,31 +10,4 @@
   background-image: url(images/AsiaCover.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.filterAsia {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 20%;
-  margin-top: 100px;
-  margin-left: 100px;
-}
-.filterCategory {
-  width: 100%;
-  height: 100px;
-  margin-bottom: 50px;
-}
-.categoryLabel {
-  color: goldenrod;
-  font-size: 2em;
-}
-.collectionLabel {
-  color: goldenrod;
-  font-size: 1.5em;
-}
-
-select {
-  width: 50%;
-  height: 50px;
 }

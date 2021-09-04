@@ -15,29 +15,78 @@
   background-image: url(images/collectionBackgroundEgypt.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .collection.greece {
   background-image: url(images/collectionBackgroundGreece.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 .collection.asia {
   background-image: url(images/collectionBackgroundAsia.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 
+.collection.egypt .collection-title {
+  visibility: hidden;
+  width: 20%;
+  color: goldenrod;
+  text-shadow: 4px 4px #022140;
+  text-align: center;
+  font-size: 5em;
+  position: absolute;
+  z-index: 1;
+  top: 35%;
+  left: 30%;
+}
+
+.collection.egypt:hover .collection-title {
+  visibility: visible;
+}
+.collection.greece .collection-title {
+  visibility: hidden;
+  width: 20%;
+  color: goldenrod;
+  text-shadow: 4px 4px #022140;
+  text-align: center;
+  font-size: 4em;
+  position: absolute;
+  z-index: 1;
+  top: 35%;
+  left: 10%;
+}
+
+.collection.greece:hover .collection-title {
+  visibility: visible;
+}
+.collection.asia .collection-title {
+  visibility: hidden;
+  width: 20%;
+  color: goldenrod;
+  text-shadow: 4px 4px #022140;
+  text-align: center;
+  font-size: 5em;
+  position: absolute;
+  z-index: 1;
+  top: 35%;
+  left: 30%;
+}
+
+.collection.asia:hover .collection-title {
+  visibility: visible;
+}
 @media only screen and (max-width: 600px) {
   .collection-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    
   }
-  .collection{
+  .collection {
     margin-top: 10px;
     width: 100%;
-    
   }
 }

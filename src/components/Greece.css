@@ -2,12 +2,7 @@
   width: 100%;
 }
 
-.headerGreece {
-  text-align: center;
-  font-size: 2em;
-  color: goldenrod;
-}
-.headerImgGreece {
+.headerImg-greece {
   margin: 0 auto;
   width: 80%;
   height: 400px;
@@ -15,31 +10,4 @@
   background-image: url(images/GreeceCover.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-}
-
-.filterGreece {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 20%;
-  margin-top: 100px;
-  margin-left: 100px;
-}
-.filterCategory {
-  width: 100%;
-  height: 100px;
-  margin-bottom: 50px;
-}
-.categoryLabel {
-  color: goldenrod;
-  font-size: 2em;
-}
-.collectionLabel {
-  color: goldenrod;
-  font-size: 1.5em;
-}
-
-select {
-  width: 50%;
-  height: 50px;
 }

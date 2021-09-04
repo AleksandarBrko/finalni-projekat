@@ -2,42 +2,42 @@ import React, { Component } from "react";
 
 import "./Greece.css";
 import ApiCollectionGreece from "./ApiCollectionGreece.js";
+import Header from "./Header";
+import Footer from "./Footer";
 
 class Greece extends Component {
-  constructor(props) {
-    // use super so we can access "this"
-    super(props);
-  }
-
   render() {
     return (
       <div className="greece-container">
-        <div className="headerGreece">
-          <div className="titleGreece">
+        <Header />
+        <hr/>
+        <div className="header-culture">
+          <div className="title-culture">
             <h1>GREEK AND ROMAN</h1>
           </div>
-          <div className="headerImgGreece"></div>
+          <div className="headerImg-greece"></div>
         </div>
-        <div className="filterGreece">
-          <div className="filterCategory">
-            <div className="categoryLabel">CATEGORY</div>
-            <select className="form-select" aria-label="Default select example">
-              <option value="1">Greece</option>
-              <option value="2">Egypt</option>
-              <option value="3">Greece</option>
-            </select>
-          </div>
-
-          <div className="filterCollection">
-            <div className="collectionLabel">COLLECTION</div>
+        <div className="filter-culture">
+          <div className="filter-collection">
+            <div className="collection-label">COLLECTION</div>
             <select className="form-select" aria-label="Default select example">
               <option value="1">CollectionOne</option>
               <option value="2">CollectionTwo</option>
               <option value="3">CollectionThree</option>
             </select>
           </div>
+          <div className="filter-type">
+            <div className="type-label">TYPE</div>
+            <select className="form-select" aria-label="Default select example">
+              <option value="1">Egypt</option>
+              <option value="2">Greece</option>
+              <option value="3">Asia</option>
+            </select>
+          </div>
         </div>
         <ApiCollectionGreece />
+        <hr/>
+        <Footer />
       </div>
     );
   }

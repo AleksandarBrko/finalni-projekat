@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./ApiCollectionEgypt.css";
+import "./ApiCollection.css";
 
 class ApiCollectionEgypt extends Component {
   constructor(props) {
@@ -37,6 +37,15 @@ class ApiCollectionEgypt extends Component {
   }
 
   render() {
+    const nextPage = () => {
+      this.setState({
+        current: this.state.current + 1,
+        pageList: this.state.data.slice(
+          this.state.current * 12,
+          this.state.current * 12 + 11
+        ),
+      });
+    };
     const previousPage = () => {
       // ne smije stranica da ode na 0 ili minus
       if (this.state.current !== 1) {
@@ -50,16 +59,6 @@ class ApiCollectionEgypt extends Component {
       }
     };
 
-    const nextPage = () => {
-      this.setState({
-        current: this.state.current + 1,
-        pageList: this.state.data.slice(
-          this.state.current * 12,
-          this.state.current * 12 + 11
-        ),
-      });
-    };
-
     if (this.state.apiError) {
       return <div>Error: {this.state.apiError.message}</div>;
     } else if (!this.state.isLoaded) {
@@ -67,16 +66,6 @@ class ApiCollectionEgypt extends Component {
     } else {
       return (
         <div className="apiList-container">
-          <div className="pagination">
-            <button onClick={previousPage} className="previous-page">
-              prev
-            </button>
-
-            <div className="current-page">{this.state.current}</div>
-            <button onClick={nextPage} className="next-page">
-              next
-            </button>
-          </div>
           <div className="list-row headRow">
             <div className="row-item headRow">Title</div>
             <div className="row-item headRow second">Collection</div>
@@ -84,7 +73,7 @@ class ApiCollectionEgypt extends Component {
             <div className="row-item imagesRow">Image</div>
           </div>
           {this.state.pageList.map((item) => (
-            <div className="list-row">
+            <div className="list-row data">
               <div className="row-item title">{item.title}</div>
               <div className="row-item second">{item.collection}</div>
               <div className="row-item type">{item.type}</div>
@@ -98,6 +87,16 @@ class ApiCollectionEgypt extends Component {
               )}
             </div>
           ))}
+          <div className="pagination">
+            <button onClick={previousPage} className="previous-page">
+              prev
+            </button>
+
+            <div className="current-page">{this.state.current}</div>
+            <button onClick={nextPage} className="next-page">
+              next
+            </button>
+          </div>
         </div>
       );
     }

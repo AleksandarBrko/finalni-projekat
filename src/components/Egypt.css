@@ -1,11 +1,11 @@
 .egypt-container {
   width: 100%;
 }
-
-.headerEgypt {
+.header-culture {
   text-align: center;
   font-size: 2em;
   color: goldenrod;
+  text-shadow: 1px 1px green;
 }
 .header-img-egypt {
   margin: 0 auto;
@@ -17,7 +17,7 @@
   background-repeat: no-repeat;
 }
 
-.filter-egypt {
+.filter-culture {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -31,7 +31,6 @@
   justify-content: center;
   align-items: center;
   width: 500px;
-  
 }
 .filter-type {
   display: flex;
@@ -39,7 +38,6 @@
   justify-content: center;
   align-items: center;
   width: 500px;
-  
 }
 .type-label {
   color: goldenrod;
