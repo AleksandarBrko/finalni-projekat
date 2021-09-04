@@ -14,7 +14,7 @@ class Greece extends Component {
       <div className="greece-container">
         <div className="headerGreece">
           <div className="titleGreece">
-            <h1>GREECE</h1>
+            <h1>GREEK AND ROMAN</h1>
           </div>
           <div className="headerImgGreece"></div>
         </div>

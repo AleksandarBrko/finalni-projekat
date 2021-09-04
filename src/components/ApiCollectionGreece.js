@@ -6,9 +6,11 @@ class ApiCollectionGreece extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      current: 1,
       apiError: null,
       isLoaded: false,
       data: [],
+      pageList: [],
     };
   }
   componentDidMount() {
@@ -21,6 +23,7 @@ class ApiCollectionGreece extends Component {
           this.setState({
             isLoaded: true,
             data: result.data,
+            pageList: result.data.slice(0, 11),
           });
         },
 
@@ -34,6 +37,28 @@ class ApiCollectionGreece extends Component {
   }
 
   render() {
+    const previousPage = () => {
+      // ne smije stranica da ode na 0 ili minus
+      if (this.state.current !== 1) {
+        this.setState({
+          current: this.state.current - 1,
+          pageList: this.state.data.slice(
+            (this.state.current - 2) * 12,
+            (this.state.current - 2) * 12 + 11
+          ),
+        });
+      }
+    };
+
+    const nextPage = () => {
+      this.setState({
+        current: this.state.current + 1,
+        pageList: this.state.data.slice(
+          this.state.current * 12,
+          this.state.current * 12 + 11
+        ),
+      });
+    };
     if (this.state.apiError) {
       return <div>Error: {this.state.apiError.message}</div>;
     } else if (!this.state.isLoaded) {
@@ -41,7 +66,17 @@ class ApiCollectionGreece extends Component {
     } else {
       return (
         <div className="apiList-container">
-          {this.state.data.map((item) => (
+          <div className="pagination">
+            <button onClick={previousPage} className="previous-page">
+              prev
+            </button>
+
+            <div className="current-page">{this.state.current}</div>
+            <button onClick={nextPage} className="next-page">
+              next
+            </button>
+          </div>
+          {this.state.pageList.map((item) => (
             <div className="list-row">
               <div className="row-item title">{item.title}</div>
               <div className="row-item">{item.collection}</div>

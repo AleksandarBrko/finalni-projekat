@@ -20,7 +20,7 @@
   width: 200px;
   height: 20px;
   margin-top: 5px;
-  margin-right: 50px;
+  margin-right: 100px;
   justify-content: center;
 }
 .log {
@@ -39,9 +39,4 @@
 .reg a {
   text-decoration: none;
   color: goldenrod;
-}
-@media only screen and (max-width: 600px) {
-  .registration {
-    margin-right: 30%;
-  }
 }

@@ -6,10 +6,11 @@ class ApiCollectionEgypt extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      current: 0,
+      current: 1,
       apiError: null,
       isLoaded: false,
       data: [],
+      pageList: [],
     };
   }
   componentDidMount() {
@@ -22,6 +23,7 @@ class ApiCollectionEgypt extends Component {
           this.setState({
             isLoaded: true,
             data: result.data,
+            pageList: result.data.slice(0, 11),
           });
         },
 
@@ -36,21 +38,27 @@ class ApiCollectionEgypt extends Component {
 
   render() {
     const previousPage = () => {
-      this.setState({
-        current: this.state.current - 1,
-      });
+      // ne smije stranica da ode na 0 ili minus
+      if (this.state.current !== 1) {
+        this.setState({
+          current: this.state.current - 1,
+          pageList: this.state.data.slice(
+            (this.state.current - 2) * 12,
+            (this.state.current - 2) * 12 + 11
+          ),
+        });
+      }
     };
-    console.log(this.state.current);
+
     const nextPage = () => {
       this.setState({
         current: this.state.current + 1,
+        pageList: this.state.data.slice(
+          this.state.current * 12,
+          this.state.current * 12 + 11
+        ),
       });
-      console.log(this.state.current);
     };
-
-    if (this.state.current === 1) {
-      return this.state.data.slice(0, 11);
-    }
 
     if (this.state.apiError) {
       return <div>Error: {this.state.apiError.message}</div>;
@@ -75,7 +83,7 @@ class ApiCollectionEgypt extends Component {
             <div className="row-item headRow third">Type</div>
             <div className="row-item imagesRow">Image</div>
           </div>
-          {this.state.data.map((item) => (
+          {this.state.pageList.map((item) => (
             <div className="list-row">
               <div className="row-item title">{item.title}</div>
               <div className="row-item second">{item.collection}</div>
