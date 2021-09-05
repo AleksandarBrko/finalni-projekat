@@ -11,6 +11,8 @@ class ApiCollectionEgypt extends Component {
       isLoaded: false,
       data: [],
       pageList: [],
+      filteredList: [],
+      filterActive: false
     };
   }
   componentDidMount() {
@@ -23,7 +25,7 @@ class ApiCollectionEgypt extends Component {
           this.setState({
             isLoaded: true,
             data: result.data,
-            pageList: result.data.slice(0, 11),
+            pageList: result.data.slice(0, 12),
           });
         },
 
@@ -38,30 +40,89 @@ class ApiCollectionEgypt extends Component {
 
   render() {
     const filterCollection = (collection) => {
-      const colList = this.state.data;
-      const result = colList.filter((item) => item.collection === collection);
-      console.log(result);
+      if(collection === "all") {
+        this.setState({
+          pageList: this.state.data.slice(0,12),
+          filterActive: false,
+          filteredList: [],
+          current: 1
+        })
+      } else {
+        const colList = this.state.data;
+        const result = colList.filter((item) => item.collection === collection);
+        this.setState({
+          filteredList: result,
+          filterActive: true,
+          pageList: result.slice(0, 12),
+          current: 1
+        })
+      }
+    };
+
+    const filterType = (type) => {
+      if(type === "all") {
+        this.setState({
+          pageList: this.state.data.slice(0,12),
+          filterActive: false,
+          filteredList: [],
+          current: 1
+        })
+      } else {
+        const colList = this.state.data;
+        const result = colList.filter((item) => item.type === type);
+        this.setState({
+          filteredList: result,
+          filterActive: true,
+          pageList: result.slice(0, 12),
+          current: 1
+        })
+      }
     };
 
     const nextPage = () => {
-      this.setState({
-        current: this.state.current + 1,
-        pageList: this.state.data.slice(
-          this.state.current * 12,
-          this.state.current * 12 + 11
-        ),
-      });
-    };
-    const previousPage = () => {
-      // ne smije stranica da ode na 0 ili minus
-      if (this.state.current !== 1) {
+       // ako je filter aktivan, sjeckamo filtriranu listu umesto cijele liste
+      if (this.state.filterActive === true) {
         this.setState({
-          current: this.state.current - 1,
-          pageList: this.state.data.slice(
-            (this.state.current - 2) * 12,
-            (this.state.current - 2) * 12 + 11
+          current: this.state.current + 1,
+          pageList: this.state.filteredList.slice(
+            this.state.current * 12,
+            this.state.current * 12 + 12
           ),
         });
+      } else {
+        this.setState({
+          current: this.state.current + 1,
+          pageList: this.state.data.slice(
+            this.state.current * 12,
+            this.state.current * 12 + 12
+          ),
+        });
+      }
+      
+    };
+    const previousPage = () => {
+      // ako je filter aktivan, sjeckamo filtriranu listu umesto cijele liste
+      if (this.state.filterActive === true) {
+        // ne smije stranica da ode na 0 ili minus
+        if (this.state.current !== 1) {
+          this.setState({
+            current: this.state.current - 1,
+            pageList: this.state.filteredList.slice(
+              (this.state.current - 2) * 12,
+              (this.state.current - 2) * 12 + 12
+            ),
+          });
+        }
+      } else {
+        if (this.state.current !== 1) {
+          this.setState({
+            current: this.state.current - 1,
+            pageList: this.state.data.slice(
+              (this.state.current - 2) * 12,
+              (this.state.current - 2) * 12 + 12
+            ),
+          });
+        }
       }
     };
 
@@ -75,31 +136,21 @@ class ApiCollectionEgypt extends Component {
           <div className="filter-culture">
             <div className="filter-collection">
               <div className="collection-label">COLLECTION</div>
-              <select
-                className="form-select"
-                aria-label="Default select example"
-              >
-                <option value="1" selected>
-                  All
-                </option>
-                <option value="2">Egypt - New Kingdom</option>
-                <option value="3">Near Eastern Art</option>
-                <option value="4">Egypt - Middle Kingdom</option>
-              </select>
+              <div className="filter-select">
+                <div className="filter-option" onClick={() => filterCollection("all")}>All</div>
+                <div className="filter-option" onClick={() => filterCollection("Egypt - New Kingdom")}>Egypt - New Kingdom</div>
+                <div className="filter-option" onClick={() => filterCollection("Near Eastern Art")}>Near Eastern Art</div>
+                <div className="filter-option" onClick={() => filterCollection("Egypt - Middle Kingdom")}>Egypt - Middle Kingdom</div>
+              </div>
             </div>
             <div className="filter-type">
               <div className="type-label">TYPE</div>
-              <select
-                className="form-select"
-                aria-label="Default select example"
-              >
-                <option value="1" selected>
-                  All
-                </option>
-                <option value="2">Sculpture</option>
-                <option value="3">Metalwork</option>
-                <option value="4">Implements</option>
-              </select>
+              <div className="filter-select">
+                <div className="filter-option" onClick={() => filterType("all")}>All</div>
+                <div className="filter-option" onClick={() => filterType("Sculpture")}>Sculpture</div>
+                <div className="filter-option" onClick={() => filterType("Metalwork")}>Metalwork</div>
+                <div className="filter-option" onClick={() => filterType("Implements")}>Implements</div>
+              </div>
             </div>
           </div>
           <div className="list-row headRow">
