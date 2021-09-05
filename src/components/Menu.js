@@ -4,8 +4,14 @@ import { Link } from "react-router-dom";
 import "./Menu.css";
 
 class Menu extends Component {
-  
   render() {
+    let user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+    const logout = () => {
+      localStorage.setItem("loggedInUser", null);
+      window.location.replace("http://localhost:3000");
+    }
+
     return (
       <div className="menu-container">
         <div className="proba">
@@ -31,10 +37,17 @@ class Menu extends Component {
                 </div>
               </div>
             </div>
-            <div className="logovanje">
-              <Link to="/login">Log in</Link>
-              <Link to="/register">Sign up</Link>
-            </div>
+            {user === null ? (
+              <div className="logovanje">
+                <Link to="/login">Log in</Link>
+                <Link to="/register">Sign up</Link>
+              </div>
+            ) : (
+              <div className="logovanje">
+                <div className="username">{user.user}</div>
+                <div className="logout" onClick={() => logout()}>Logout</div>
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -28,12 +28,10 @@
 .log-user input {
   height: 35px;
   font-size: 0.5em;
-  color: white;
 }
 .log-pass input {
   height: 35px;
   font-size: 1em;
-  color: white;
 }
 .login-container button {
   margin-bottom: 30px;
