@@ -4,11 +4,15 @@ import "./Asia.css";
 import ApiCollectionAsia from "./ApiCollectionAsia.js";
 import Header from "./Header";
 import Footer from "./Footer";
+import Menu from "./Menu";
 
 class Asia extends Component {
   render() {
     return (
       <div className="asia-container">
+        <div className="stick">
+          <Menu />
+        </div>
         <Header />
         <hr />
         <div className="header-culture">

@@ -4,9 +4,14 @@
   flex-direction: column;
   width: 100%;
 }
-.eventTitle{
-    margin-top: 100px;
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: goldenrod;
+.eventTitle {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: goldenrod;
+}
+
+.main-hr{
+  margin-top: 20px;
+  width: 40%;
 }

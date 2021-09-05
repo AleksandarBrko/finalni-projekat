@@ -9,7 +9,6 @@
   margin-bottom: 0;
   color: goldenrod;
   text-shadow: 1px 1px yellow;
-  
 }
 .maintitle img {
   width: 100px;
@@ -27,7 +26,7 @@
   padding-right: 25px;
   border-right: 1px solid goldenrod;
 }
-.log a {
+.log div {
   text-decoration: none;
   color: goldenrod;
 }
@@ -36,7 +35,8 @@
   padding-left: 25px;
 }
 
-.reg a {
+.reg div {
   text-decoration: none;
+  list-style-type: none;
   color: goldenrod;
 }

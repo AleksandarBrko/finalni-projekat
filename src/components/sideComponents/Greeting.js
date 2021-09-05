@@ -5,11 +5,6 @@ import Header from "../Header";
 import "./Greeting.css";
 
 class Greeting extends Component {
-  constructor(props) {
-    // use super so we can access "this"
-    super(props);
-  }
-
   render() {
     return (
       <div className="greeting-container">
@@ -24,6 +19,7 @@ class Greeting extends Component {
           <div className="greet-response">We will contact you soon.</div>
         </div>
         <hr />
+
         <Footer />
       </div>
     );

@@ -4,13 +4,17 @@ import "./Greece.css";
 import ApiCollectionGreece from "./ApiCollectionGreece.js";
 import Header from "./Header";
 import Footer from "./Footer";
+import Menu from "./Menu";
 
 class Greece extends Component {
   render() {
     return (
       <div className="greece-container">
+        <div className="stick">
+          <Menu />
+        </div>
         <Header />
-        <hr/>
+        <hr />
         <div className="header-culture">
           <div className="title-culture">
             <h1>GREEK AND ROMAN</h1>
@@ -36,7 +40,7 @@ class Greece extends Component {
           </div>
         </div>
         <ApiCollectionGreece />
-        <hr/>
+        <hr />
         <Footer />
       </div>
     );

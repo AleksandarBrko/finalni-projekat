@@ -37,6 +37,12 @@ class ApiCollectionEgypt extends Component {
   }
 
   render() {
+    const filterCollection = (collection) => {
+      const colList = this.state.data;
+      const result = colList.filter((item) => item.collection === collection);
+      console.log(result);
+    };
+
     const nextPage = () => {
       this.setState({
         current: this.state.current + 1,
@@ -66,6 +72,36 @@ class ApiCollectionEgypt extends Component {
     } else {
       return (
         <div className="apiList-container">
+          <div className="filter-culture">
+            <div className="filter-collection">
+              <div className="collection-label">COLLECTION</div>
+              <select
+                className="form-select"
+                aria-label="Default select example"
+              >
+                <option value="1" selected>
+                  All
+                </option>
+                <option value="2">Egypt - New Kingdom</option>
+                <option value="3">Near Eastern Art</option>
+                <option value="4">Egypt - Middle Kingdom</option>
+              </select>
+            </div>
+            <div className="filter-type">
+              <div className="type-label">TYPE</div>
+              <select
+                className="form-select"
+                aria-label="Default select example"
+              >
+                <option value="1" selected>
+                  All
+                </option>
+                <option value="2">Sculpture</option>
+                <option value="3">Metalwork</option>
+                <option value="4">Implements</option>
+              </select>
+            </div>
+          </div>
           <div className="list-row headRow">
             <div className="row-item headRow">Title</div>
             <div className="row-item headRow second">Collection</div>

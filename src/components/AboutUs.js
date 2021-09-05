@@ -5,7 +5,7 @@ import "./AboutUs.css";
 class AboutUs extends Component {
   render() {
     return (
-      <div className="aboutus-container">
+      <div className="aboutus-container" id="aboutus">
         <h2>ABOUT US</h2>
         <div className="aboutus-text">
           The Museum was made for explorers and adventurers—it was made for

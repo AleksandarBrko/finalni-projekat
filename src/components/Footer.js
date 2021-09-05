@@ -5,12 +5,8 @@ import Facebook from "./icons/fb.png";
 import Instagram from "./icons/insta.png";
 import Twitter from "./icons/twitter.png";
 
-class Footer extends Component {
-  constructor(props) {
-    // use super so we can access "this"
-    super(props);
-  }
 
+class Footer extends Component {
   render() {
     return (
       <div className="footer-container">
@@ -34,7 +30,7 @@ class Footer extends Component {
           </div>
 
           <div className="copyright">
-            <p>© The museum of ancient history</p>
+            <p>© The Museum of Ancient History</p>
           </div>
         </div>
       </div>

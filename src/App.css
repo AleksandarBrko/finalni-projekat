@@ -1,4 +1,8 @@
-hr{
-    
-    border: 1px solid goldenrod;
+hr {
+  border: 1px solid goldenrod;
+}
+.stick {
+  position: sticky;
+  top: 0px;
+  z-index: 2;
 }

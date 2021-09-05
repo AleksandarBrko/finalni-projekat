@@ -12,6 +12,9 @@ import Footer from "./components/Footer";
 import Egypt from "./components/Egypt";
 import Greece from "./components/Greece";
 import Asia from "./components/Asia";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import Menu from "./components/Menu";
 
 class App extends Component {
   constructor(props) {
@@ -27,6 +30,9 @@ class App extends Component {
         <div>
           <Switch>
             <Route exact path="/">
+              <div className="stick">
+                <Menu />
+              </div>
               <Main />
               <CollectionTitle />
               <Collection />
@@ -36,8 +42,12 @@ class App extends Component {
               <hr />
               <Footer />
             </Route>
-            <Route path="/login"></Route>
-            <Route path="/register"></Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
             <Route path="/greeting">
               <Greeting />
             </Route>

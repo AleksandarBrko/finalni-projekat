@@ -4,14 +4,9 @@ import { Link } from "react-router-dom";
 import "./ContactForm.css";
 
 class ContactForm extends Component {
-  constructor(props) {
-    // use super so we can access "this"
-    super(props);
-  }
-
   render() {
     return (
-      <div className="contactform-container">
+      <div className="contactform-container" id="contact">
         <div className="contactForm-title">
           <h2>CONTACT</h2>
         </div>

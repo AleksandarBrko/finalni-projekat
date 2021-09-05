@@ -1,0 +1,42 @@
+.loginForm-header {
+  text-align: center;
+  font-size: 2em;
+  color: goldenrod;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  margin: 0 auto;
+}
+.log-user,
+.log-pass {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-bottom: 20px;
+}
+.log-user,
+.log-pass label {
+  text-align: center;
+  font-size: 2em;
+}
+.log-user input {
+  height: 35px;
+  font-size: 0.5em;
+  color: white;
+}
+.log-pass input {
+  height: 35px;
+  font-size: 1em;
+  color: white;
+}
+.login-container button {
+  margin-bottom: 30px;
+  width: 100px;
+  height: 30px;
+}
