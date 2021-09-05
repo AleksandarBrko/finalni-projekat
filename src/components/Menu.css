@@ -84,6 +84,7 @@
   text-decoration: none;
   display: block;
   text-align: left;
+  border: 1px solid #265077;
   border-radius: 20px;
   margin-bottom: 10px;
 }
