@@ -22,7 +22,7 @@ class Register extends Component {
       //novog usera ubacujemo u niz
       registeredUsers.push(newUser);
       localStorage.setItem("registeredUsers", JSON.stringify(registeredUsers));
-      alert("You have sucessfully registreted!");
+      alert("You have successfully registereted!");
       window.location.replace("http://localhost:3000/login");
     };
 

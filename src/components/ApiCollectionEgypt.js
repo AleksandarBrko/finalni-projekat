@@ -84,21 +84,27 @@ class ApiCollectionEgypt extends Component {
     const nextPage = () => {
       // ako je filter aktivan, sjeckamo filtriranu listu umesto cijele liste
       if (this.state.filterActive === true) {
-        this.setState({
-          current: this.state.current + 1,
-          pageList: this.state.filteredList.slice(
-            this.state.current * 12,
-            this.state.current * 12 + 12
-          ),
-        });
+        if (
+          this.state.current !== Math.ceil(this.state.filteredList.length / 12)
+        ) {
+          this.setState({
+            current: this.state.current + 1,
+            pageList: this.state.filteredList.slice(
+              this.state.current * 12,
+              this.state.current * 12 + 12
+            ),
+          });
+        }
       } else {
-        this.setState({
-          current: this.state.current + 1,
-          pageList: this.state.data.slice(
-            this.state.current * 12,
-            this.state.current * 12 + 12
-          ),
-        });
+        if (this.state.current !== Math.ceil(this.state.data.length / 12)) {
+          this.setState({
+            current: this.state.current + 1,
+            pageList: this.state.data.slice(
+              this.state.current * 12,
+              this.state.current * 12 + 12
+            ),
+          });
+        }
       }
     };
     const previousPage = () => {
