@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Footer from "./Footer";
+import Header from "./Header";
 
 import "./Login.css";
 
@@ -29,24 +30,29 @@ class Login extends Component {
         localStorage.setItem("loggedInUser", JSON.stringify(existingUser));
         window.location.replace("http://localhost:3000");
       } else {
-        alert("Wrong data");
+        alert("Sorry! Wrong info!");
       }
     };
 
     return (
       <div className="login-container">
+        <Header/>
         <hr />
         <div className="loginForm-header">LOG IN FORM</div>
-        <div className="login-form" method="POST" action="sucess">
-          <div className="log-user">
-            <label>Username</label>
-            <input type="text" id="username" />
+        <div className="login-wrapp">
+          <div className="login-form" method="POST" action="sucess">
+            <div className="log-user">
+              <label>Username</label>
+              <input type="text" id="username" />
+            </div>
+            <div className="log-pass">
+              <label>Password</label>
+              <input type="text" id="password" />
+            </div>
+            <div className="log-button">
+              <button onClick={() => loginUser()}>Log In</button>
+            </div>
           </div>
-          <div className="log-pass">
-            <label>Password</label>
-            <input type="text" id="password" />
-          </div>
-          <button onClick={() => loginUser()}>Log In</button>
         </div>
         <hr />
         <Footer />

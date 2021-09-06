@@ -6,7 +6,7 @@ import "./Menu.css";
 class Menu extends Component {
   render() {
     let user = JSON.parse(localStorage.getItem("loggedInUser"));
-    // provjerava da li je user vec logovan
+    // funkcija uklanja aktivnog usera
     const logout = () => {
       localStorage.setItem("loggedInUser", null);
       window.location.replace("http://localhost:3000");
@@ -14,9 +14,9 @@ class Menu extends Component {
 
     return (
       <div className="menu-container">
-        <div className="proba">
+        <div className="navigation">
           <div className="navbar">
-            <Link to="/">Home</Link>
+            <a href="#top">Home</a>
             <a href="#events">News</a>
             <a href="#contact">Contact</a>
             <div className="dropdown">
@@ -37,12 +37,14 @@ class Menu extends Component {
                 </div>
               </div>
             </div>
+            {/* ukoliko nema aktivnog usera, renderuj login i signup */}
             {user === null ? (
               <div className="logovanje">
                 <Link to="/login">Log in</Link>
                 <Link to="/register">Sign up</Link>
               </div>
             ) : (
+              // ukoliko ima aktivnog usera, renderuj njegov username i logout
               <div className="logovanje2">
                 <div className="username">
                   <strong>{user.user}</strong>

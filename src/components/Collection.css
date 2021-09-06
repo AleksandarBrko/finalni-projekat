@@ -15,6 +15,7 @@
   background-image: url(images/collectionBackgroundEgypt.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   position: relative;
 }
 
@@ -22,12 +23,14 @@
   background-image: url(images/collectionBackgroundGreece.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   position: relative;
 }
 .collection.asia {
   background-image: url(images/collectionBackgroundAsia.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   position: relative;
 }
 
@@ -37,11 +40,10 @@
   color: goldenrod;
   text-shadow: 4px 4px #022140;
   text-align: center;
-  font-size: 5em;
+  font-size: 3em;
   position: absolute;
   z-index: 1;
-  top: 35%;
-  left: 30%;
+  
 }
 
 .collection.egypt:hover .collection-title {
@@ -53,11 +55,10 @@
   color: goldenrod;
   text-shadow: 4px 4px #022140;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   position: absolute;
   z-index: 1;
-  top: 35%;
-  left: 10%;
+  
 }
 
 .collection.greece:hover .collection-title {
@@ -69,11 +70,10 @@
   color: goldenrod;
   text-shadow: 4px 4px #022140;
   text-align: center;
-  font-size: 5em;
+  font-size: 3em;
   position: absolute;
   z-index: 1;
-  top: 35%;
-  left: 30%;
+ 
 }
 
 .collection.asia:hover .collection-title {
@@ -89,4 +89,5 @@
     margin-top: 10px;
     width: 100%;
   }
+  
 }

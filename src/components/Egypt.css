@@ -26,31 +26,12 @@
   margin-top: 100px;
 }
 
-.filter-collection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 500px;
-}
-.filter-type {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 500px;
-}
-.type-label {
-  color: goldenrod;
-  font-size: 2em;
-}
-.collection-label {
-  color: goldenrod;
-  font-size: 2em;
-}
 
-select {
-  width: 50%;
-  height: 50px;
-  font-size: 1.3em;
+
+
+
+@media only screen and (max-width: 600px) {
+  .header-culture {
+    font-size: 1em;
+  }
 }

@@ -134,6 +134,10 @@ class ApiCollectionGreece extends Component {
           <div className="filter-culture">
             <div className="filter-collection">
               <div className="collection-label">COLLECTION</div>
+              <div className="collection-labelF">filter</div>
+              <div className="main-hr">
+                <hr />
+              </div>
               <div className="filter-select">
                 <div
                   className="filter-option"
@@ -163,6 +167,10 @@ class ApiCollectionGreece extends Component {
             </div>
             <div className="filter-type">
               <div className="type-label">TYPE</div>
+              <div className="type-labelF">filter</div>
+              <div className="main-hr">
+                <hr />
+              </div>
               <div className="filter-select">
                 <div
                   className="filter-option"

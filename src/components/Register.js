@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import "./Register.css";
 import Footer from "./Footer";
+import Header from "./Header";
 
 class Register extends Component {
   render() {
@@ -27,8 +28,9 @@ class Register extends Component {
 
     return (
       <div className="register-container">
+        <Header />
         <hr />
-        <div className="loginForm-header">REGISTRATION FORM</div>
+        <div className="loginForm-header">SIGN UP FORM</div>
         <div className="login-form">
           <div className="log-user">
             <label>Username</label>

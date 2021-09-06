@@ -12,7 +12,7 @@ class ApiCollectionEgypt extends Component {
       data: [],
       pageList: [],
       filteredList: [],
-      filterActive: false
+      filterActive: false,
     };
   }
   componentDidMount() {
@@ -40,13 +40,13 @@ class ApiCollectionEgypt extends Component {
 
   render() {
     const filterCollection = (collection) => {
-      if(collection === "all") {
+      if (collection === "all") {
         this.setState({
-          pageList: this.state.data.slice(0,12),
+          pageList: this.state.data.slice(0, 12),
           filterActive: false,
           filteredList: [],
-          current: 1
-        })
+          current: 1,
+        });
       } else {
         const colList = this.state.data;
         const result = colList.filter((item) => item.collection === collection);
@@ -54,19 +54,19 @@ class ApiCollectionEgypt extends Component {
           filteredList: result,
           filterActive: true,
           pageList: result.slice(0, 12),
-          current: 1
-        })
+          current: 1,
+        });
       }
     };
 
     const filterType = (type) => {
-      if(type === "all") {
+      if (type === "all") {
         this.setState({
-          pageList: this.state.data.slice(0,12),
+          pageList: this.state.data.slice(0, 12),
           filterActive: false,
           filteredList: [],
-          current: 1
-        })
+          current: 1,
+        });
       } else {
         const colList = this.state.data;
         const result = colList.filter((item) => item.type === type);
@@ -74,13 +74,13 @@ class ApiCollectionEgypt extends Component {
           filteredList: result,
           filterActive: true,
           pageList: result.slice(0, 12),
-          current: 1
-        })
+          current: 1,
+        });
       }
     };
 
     const nextPage = () => {
-       // ako je filter aktivan, sjeckamo filtriranu listu umesto cijele liste
+      // ako je filter aktivan, sjeckamo filtriranu listu umesto cijele liste
       if (this.state.filterActive === true) {
         this.setState({
           current: this.state.current + 1,
@@ -98,7 +98,6 @@ class ApiCollectionEgypt extends Component {
           ),
         });
       }
-      
     };
     const previousPage = () => {
       // ako je filter aktivan, sjeckamo filtriranu listu umesto cijele liste
@@ -136,20 +135,68 @@ class ApiCollectionEgypt extends Component {
           <div className="filter-culture">
             <div className="filter-collection">
               <div className="collection-label">COLLECTION</div>
+              <div className="collection-labelF">filter</div>
+              <div className="main-hr">
+                <hr />
+              </div>
               <div className="filter-select">
-                <div className="filter-option" onClick={() => filterCollection("all")}>All</div>
-                <div className="filter-option" onClick={() => filterCollection("Egypt - New Kingdom")}>Egypt - New Kingdom</div>
-                <div className="filter-option" onClick={() => filterCollection("Near Eastern Art")}>Near Eastern Art</div>
-                <div className="filter-option" onClick={() => filterCollection("Egypt - Middle Kingdom")}>Egypt - Middle Kingdom</div>
+                <div
+                  className="filter-option"
+                  onClick={() => filterCollection("all")}
+                >
+                  All
+                </div>
+                <div
+                  className="filter-option"
+                  onClick={() => filterCollection("Egypt - Predynastic")}
+                >
+                  Egypt - Predynastic
+                </div>
+                <div
+                  className="filter-option"
+                  onClick={() => filterCollection("Near Eastern Art")}
+                >
+                  Near Eastern Art
+                </div>
+                <div
+                  className="filter-option"
+                  onClick={() => filterCollection("Egypt - Late Period")}
+                >
+                  Egypt - Late Period
+                </div>
               </div>
             </div>
             <div className="filter-type">
               <div className="type-label">TYPE</div>
+              <div className="type-labelF">filter</div>
+              <div className="main-hr">
+                <hr />
+              </div>
               <div className="filter-select">
-                <div className="filter-option" onClick={() => filterType("all")}>All</div>
-                <div className="filter-option" onClick={() => filterType("Sculpture")}>Sculpture</div>
-                <div className="filter-option" onClick={() => filterType("Metalwork")}>Metalwork</div>
-                <div className="filter-option" onClick={() => filterType("Implements")}>Implements</div>
+                <div
+                  className="filter-option"
+                  onClick={() => filterType("all")}
+                >
+                  All
+                </div>
+                <div
+                  className="filter-option"
+                  onClick={() => filterType("Sculpture")}
+                >
+                  Sculpture
+                </div>
+                <div
+                  className="filter-option"
+                  onClick={() => filterType("Metalwork")}
+                >
+                  Metalwork
+                </div>
+                <div
+                  className="filter-option"
+                  onClick={() => filterType("Implements")}
+                >
+                  Implements
+                </div>
               </div>
             </div>
           </div>

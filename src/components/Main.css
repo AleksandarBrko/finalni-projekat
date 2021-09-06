@@ -11,7 +11,13 @@
   color: goldenrod;
 }
 
-.main-hr{
+.main-hr {
   margin-top: 20px;
   width: 40%;
+}
+
+@media only screen and (max-width: 800px) {
+  .main-hr {
+    width: 100%;
+  }
 }
