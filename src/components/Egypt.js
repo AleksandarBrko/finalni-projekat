@@ -17,7 +17,7 @@ class Egypt extends Component {
         <hr />
         <div className="header-culture">
           <div className="title-culture">
-            <h1>EGYPT</h1>
+            <h1>Egyptian and Ancient Near Eastern Art</h1>
           </div>
           <div className="header-img-egypt"></div>
         </div>

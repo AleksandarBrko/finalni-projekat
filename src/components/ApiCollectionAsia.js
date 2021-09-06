@@ -6,10 +6,13 @@ class ApiCollectionAsia extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      current: 1,
       apiError: null,
       isLoaded: false,
       data: [],
       pageList: [],
+      filteredList: [],
+      filterActive: false,
     };
   }
   componentDidMount() {
@@ -20,10 +23,9 @@ class ApiCollectionAsia extends Component {
       .then(
         (result) => {
           this.setState({
-            current: 1,
             isLoaded: true,
             data: result.data,
-            pageList: result.data.slice(0, 11),
+            pageList: result.data.slice(0, 12),
           });
         },
 
@@ -37,27 +39,90 @@ class ApiCollectionAsia extends Component {
   }
 
   render() {
-    const previousPage = () => {
-      // ne smije stranica da ode na 0 ili minus
-      if (this.state.current !== 1) {
+    const filterCollection = (collection) => {
+      if (collection === "all") {
         this.setState({
-          current: this.state.current - 1,
-          pageList: this.state.data.slice(
-            (this.state.current - 2) * 12,
-            (this.state.current - 2) * 12 + 11
-          ),
+          pageList: this.state.data.slice(0, 12),
+          filterActive: false,
+          filteredList: [],
+          current: 1,
+        });
+      } else {
+        const colList = this.state.data;
+        const result = colList.filter((item) => item.collection === collection);
+        this.setState({
+          filteredList: result,
+          filterActive: true,
+          pageList: result.slice(0, 12),
+          current: 1,
+        });
+      }
+    };
+
+    const filterType = (type) => {
+      if (type === "all") {
+        this.setState({
+          pageList: this.state.data.slice(0, 12),
+          filterActive: false,
+          filteredList: [],
+          current: 1,
+        });
+      } else {
+        const colList = this.state.data;
+        const result = colList.filter((item) => item.type === type);
+        this.setState({
+          filteredList: result,
+          filterActive: true,
+          pageList: result.slice(0, 12),
+          current: 1,
         });
       }
     };
 
     const nextPage = () => {
-      this.setState({
-        current: this.state.current + 1,
-        pageList: this.state.data.slice(
-          this.state.current * 12,
-          this.state.current * 12 + 11
-        ),
-      });
+      // ako je filter aktivan, sjeckamo filtriranu listu umesto cijele liste
+      if (this.state.filterActive === true) {
+        this.setState({
+          current: this.state.current + 1,
+          pageList: this.state.filteredList.slice(
+            this.state.current * 12,
+            this.state.current * 12 + 12
+          ),
+        });
+      } else {
+        this.setState({
+          current: this.state.current + 1,
+          pageList: this.state.data.slice(
+            this.state.current * 12,
+            this.state.current * 12 + 12
+          ),
+        });
+      }
+    };
+    const previousPage = () => {
+      // ako je filter aktivan, sjeckamo filtriranu listu umesto cijele liste
+      if (this.state.filterActive === true) {
+        // ne smije stranica da ode na 0 ili minus
+        if (this.state.current !== 1) {
+          this.setState({
+            current: this.state.current - 1,
+            pageList: this.state.filteredList.slice(
+              (this.state.current - 2) * 12,
+              (this.state.current - 2) * 12 + 12
+            ),
+          });
+        }
+      } else {
+        if (this.state.current !== 1) {
+          this.setState({
+            current: this.state.current - 1,
+            pageList: this.state.data.slice(
+              (this.state.current - 2) * 12,
+              (this.state.current - 2) * 12 + 12
+            ),
+          });
+        }
+      }
     };
     if (this.state.apiError) {
       return <div>Error: {this.state.apiError.message}</div>;
@@ -66,6 +131,66 @@ class ApiCollectionAsia extends Component {
     } else {
       return (
         <div className="apiList-container">
+          <div className="filter-culture">
+            <div className="filter-collection">
+              <div className="collection-label">COLLECTION</div>
+              <div className="filter-select">
+                <div
+                  className="filter-option"
+                  onClick={() => filterCollection("all")}
+                >
+                  All
+                </div>
+                <div
+                  className="filter-option"
+                  onClick={() => filterCollection("China - Ming Dynasty")}
+                >
+                  China - Ming Dynasty
+                </div>
+                <div
+                  className="filter-option"
+                  onClick={() => filterCollection("China - Yuan Dynasty")}
+                >
+                  China - Yuan Dynasty
+                </div>
+                <div
+                  className="filter-option"
+                  onClick={() => filterCollection("China - Tang Dynasty")}
+                >
+                  China - Tang Dynasty
+                </div>
+              </div>
+            </div>
+            <div className="filter-type">
+              <div className="type-label">TYPE</div>
+              <div className="filter-select">
+                <div
+                  className="filter-option"
+                  onClick={() => filterType("all")}
+                >
+                  All
+                </div>
+                <div
+                  className="filter-option"
+                  onClick={() => filterType("Sculpture")}
+                >
+                  Sculpture
+                </div>
+                <div
+                  className="filter-option"
+                  onClick={() => filterType("Metalwork")}
+                >
+                  Metalwork
+                </div>
+                <div
+                  className="filter-option"
+                  onClick={() => filterType("Jade")}
+                >
+                  Jade
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="list-row headRow">
             <div className="row-item headRow">Title</div>
             <div className="row-item headRow second">Collection</div>

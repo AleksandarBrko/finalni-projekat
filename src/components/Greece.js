@@ -17,28 +17,11 @@ class Greece extends Component {
         <hr />
         <div className="header-culture">
           <div className="title-culture">
-            <h1>GREEK AND ROMAN</h1>
+            <h1>Greek and Roman Art</h1>
           </div>
           <div className="headerImg-greece"></div>
         </div>
-        <div className="filter-culture">
-          <div className="filter-collection">
-            <div className="collection-label">COLLECTION</div>
-            <select className="form-select" aria-label="Default select example">
-              <option value="1">CollectionOne</option>
-              <option value="2">CollectionTwo</option>
-              <option value="3">CollectionThree</option>
-            </select>
-          </div>
-          <div className="filter-type">
-            <div className="type-label">TYPE</div>
-            <select className="form-select" aria-label="Default select example">
-              <option value="1">Egypt</option>
-              <option value="2">Greece</option>
-              <option value="3">Asia</option>
-            </select>
-          </div>
-        </div>
+
         <ApiCollectionGreece />
         <hr />
         <Footer />

@@ -6,9 +6,9 @@ import "./Login.css";
 class Login extends Component {
   render() {
     let registeredUsers = JSON.parse(localStorage.getItem("registeredUsers"));
-
+    // ukoliko nema korisnika, niz je prazan
     if (registeredUsers === null) {
-      registeredUsers = []
+      registeredUsers = [];
     }
 
     const loginUser = () => {
@@ -16,19 +16,22 @@ class Login extends Component {
       let password = document.getElementById("password").value;
       let existingUser = {
         user: username,
-        pass: password
-      }
+        pass: password,
+      };
 
-      let result = registeredUsers.find((item) => (item.user === existingUser.user && item.pass === existingUser.pass));
-      console.log("Index", result)
-      // Vraca -1 ukoliko ne nadje
+      let result = registeredUsers.find(
+        (item) =>
+          item.user === existingUser.user && item.pass === existingUser.pass
+      );
+      console.log("Index", result);
+      // Ukoliko nije undefined, user je vec logovan
       if (result !== undefined) {
         localStorage.setItem("loggedInUser", JSON.stringify(existingUser));
         window.location.replace("http://localhost:3000");
       } else {
-        alert("Wrong data")
+        alert("Wrong data");
       }
-    }
+    };
 
     return (
       <div className="login-container">
@@ -43,9 +46,7 @@ class Login extends Component {
             <label>Password</label>
             <input type="text" id="password" />
           </div>
-          <button onClick={() => loginUser()}>
-            Log In
-          </button>
+          <button onClick={() => loginUser()}>Log In</button>
         </div>
         <hr />
         <Footer />

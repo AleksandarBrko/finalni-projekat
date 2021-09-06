@@ -2,7 +2,7 @@
 
 .navbar {
   overflow: hidden;
-  background-color: red;
+  background-color: #265077;
   font-family: Arial;
 }
 .navbar .logovanje {
@@ -40,7 +40,7 @@
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-  background-color: #265077;
+  background-color: goldenrod;
 }
 
 /* Dropdown content (hidden by default) */
@@ -100,6 +100,20 @@
   content: "";
   display: table;
   clear: both;
+}
+
+.logovanje2 {
+  display: flex;
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.username {
+  color: goldenrod;
+  padding-right: 10px;
 }
 
 @media only screen and (max-width: 600px) {

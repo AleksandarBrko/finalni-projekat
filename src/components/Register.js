@@ -6,23 +6,25 @@ import Footer from "./Footer";
 class Register extends Component {
   render() {
     let registeredUsers = JSON.parse(localStorage.getItem("registeredUsers"));
-
+    // ukoliko nema korisnika, niz je prazan
     if (registeredUsers === null) {
-      registeredUsers = []
+      registeredUsers = [];
     }
-
+    // uzimamo info iz inputa i pravimo novog usera
     const registerUser = () => {
       let username = document.getElementById("username").value;
       let password = document.getElementById("password").value;
       let newUser = {
         user: username,
-        pass: password
-      }
-
+        pass: password,
+      };
+      //novog usera ubacujemo u niz
       registeredUsers.push(newUser);
       localStorage.setItem("registeredUsers", JSON.stringify(registeredUsers));
-    }
- 
+      alert("You have sucessfully registreted!");
+      window.location.replace("http://localhost:3000/login");
+    };
+
     return (
       <div className="register-container">
         <hr />
@@ -36,9 +38,7 @@ class Register extends Component {
             <label>Password</label>
             <input type="text" id="password" />
           </div>
-          <button onClick={() => registerUser()}>
-            Sign Up
-          </button>
+          <button onClick={() => registerUser()}>Sign Up</button>
         </div>
         <hr />
         <Footer />

@@ -17,28 +17,11 @@ class Asia extends Component {
         <hr />
         <div className="header-culture">
           <div className="title-culture">
-            <h1>ASIA</h1>
+            <h1>Chinese art</h1>
           </div>
           <div className="headerImg-asia"></div>
         </div>
-        <div className="filter-culture">
-          <div className="filter-collection">
-            <div className="collection-label">COLLECTION</div>
-            <select className="form-select" aria-label="Default select example">
-              <option value="1">CollectionOne</option>
-              <option value="2">CollectionTwo</option>
-              <option value="3">CollectionThree</option>
-            </select>
-          </div>
-          <div className="filter-type">
-            <div className="type-label">TYPE</div>
-            <select className="form-select" aria-label="Default select example">
-              <option value="1">Egypt</option>
-              <option value="2">Greece</option>
-              <option value="3">Asia</option>
-            </select>
-          </div>
-        </div>
+
         <ApiCollectionAsia />
         <hr />
         <Footer />
