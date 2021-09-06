@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -36,7 +37,8 @@ class Login extends Component {
 
     return (
       <div className="login-container">
-        <Header/>
+        <div></div>
+        <Header />
         <hr />
         <div className="loginForm-header">LOG IN FORM</div>
         <div className="login-wrapp">

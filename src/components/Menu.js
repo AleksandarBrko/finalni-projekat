@@ -39,13 +39,13 @@ class Menu extends Component {
             </div>
             {/* ukoliko nema aktivnog usera, renderuj login i signup */}
             {user === null ? (
-              <div className="logovanje">
+              <div className="loging">
                 <Link to="/login">Log in</Link>
                 <Link to="/register">Sign up</Link>
               </div>
             ) : (
-              // ukoliko ima aktivnog usera, renderuj njegov username i logout
-              <div className="logovanje2">
+              
+              <div className="loging2">
                 <div className="username">
                   <strong>{user.user}</strong>
                 </div>

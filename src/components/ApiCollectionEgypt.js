@@ -39,6 +39,7 @@ class ApiCollectionEgypt extends Component {
   }
 
   render() {
+    // ukoliko je filter all, slice-ujemo iz data, pocetna stranica je 1
     const filterCollection = (collection) => {
       if (collection === "all") {
         this.setState({
@@ -48,6 +49,7 @@ class ApiCollectionEgypt extends Component {
           current: 1,
         });
       } else {
+        // u suprotnom iz kolekcije koju smo filtrirali
         const colList = this.state.data;
         const result = colList.filter((item) => item.collection === collection);
         this.setState({
@@ -139,6 +141,7 @@ class ApiCollectionEgypt extends Component {
               <div className="main-hr">
                 <hr />
               </div>
+              {/* objekti za filtriranje */}
               <div className="filter-select">
                 <div
                   className="filter-option"
