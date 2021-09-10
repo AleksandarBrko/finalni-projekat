@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 import "./Login.css";
 
@@ -29,7 +30,7 @@ class Login extends Component {
       // Ukoliko nije undefined, user je vec logovan
       if (result !== undefined) {
         localStorage.setItem("loggedInUser", JSON.stringify(existingUser));
-        window.location.replace("http://localhost:3000");
+        window.location.replace("http://localhost:3000/mainpage");
       } else {
         alert("Sorry! Wrong info!");
       }
@@ -55,6 +56,10 @@ class Login extends Component {
               <button onClick={() => loginUser()}>Log In</button>
             </div>
           </div>
+        </div>
+        <div className="question">
+          If you dont have an account, please{" "}
+          <Link to="/register">Sign up</Link>.
         </div>
         <hr />
         <Footer />

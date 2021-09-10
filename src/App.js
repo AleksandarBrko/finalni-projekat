@@ -2,19 +2,21 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
-import Main from "./components/Main";
-import Collection from "./components/Collection";
-import CollectionTitle from "./components/CollectionTitle";
-import AboutUs from "./components/AboutUs";
-import ContactForm from "./components/ContactForm";
-import Greeting from "./components/sideComponents/Greeting";
-import Footer from "./components/Footer";
-import Egypt from "./components/Egypt";
-import Greece from "./components/Greece";
-import Asia from "./components/Asia";
-import Login from "./components/Login";
-import Register from "./components/Register";
-import Menu from "./components/Menu";
+import Main from "./components/Main/Main";
+import Collection from "./components/Collection/Collection";
+import CollectionTitle from "./components/CollectionTitle/CollectionTitle";
+import AboutUs from "./components/AboutUs/AboutUs";
+import ContactForm from "./components/ContactForm/ContactForm";
+import Greeting from "./components/Greeting/Greeting";
+import Footer from "./components/Footer/Footer";
+import Egypt from "./components/Egypt/Egypt";
+import Greece from "./components/Greece/Greece";
+import Asia from "./components/Asia/Asia";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
+import Menu from "./components/Menu/Menu";
+import FirstPage from "./components/FirstPage/FirstPage";
+import MainPage from "./components/MainPage/MainPage";
 
 class App extends Component {
   constructor(props) {
@@ -30,17 +32,26 @@ class App extends Component {
         <div>
           <Switch>
             <Route exact path="/">
-              <div className="stick">
-                <Menu />
-              </div>
-              <Main />
-              <CollectionTitle />
-              <Collection />
-              <AboutUs />
-              <hr />
-              <ContactForm />
-              <hr />
-              <Footer />
+              <FirstPage>
+                <div className="stick">
+                  <Menu />
+                </div>
+                <Main />
+                <CollectionTitle />
+                <Collection />
+                <AboutUs />
+                <hr />
+                <ContactForm />
+                <hr />
+                <Footer />
+              </FirstPage>
+            </Route>
+
+            <Route path="/firstpage">
+              <FirstPage />
+            </Route>
+            <Route path="/mainpage">
+              <MainPage />
             </Route>
             <Route path="/login">
               <Login />

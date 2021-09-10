@@ -1,24 +1,24 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "font-awesome/css/font-awesome.min.css";
+import "./Menu.css";
 
-import "./Asia.css";
-import ApiCollectionAsia from "./ApiCollectionAsia.js";
-import Header from "./Header";
-import Footer from "./Footer";
-
-class Asia extends Component {
+class Menu extends Component {
   render() {
     let user = JSON.parse(localStorage.getItem("loggedInUser"));
-    // provjerava da li je user vec logovan
+    // funkcija uklanja aktivnog usera
     const logout = () => {
       localStorage.setItem("loggedInUser", null);
       window.location.replace("http://localhost:3000");
     };
+
     return (
-      <div className="asia-container">
-        <div navigation>
+      <div className="menu-container">
+        <div className="navigation">
           <div className="navbar">
-            <Link to="/">Home</Link>
+            <a href="#top">Home</a>
+            <a href="#events">News</a>
+            <a href="#contact">Contact</a>
             <div className="dropdown">
               <button className="dropbtn">
                 Collection &nbsp;
@@ -37,13 +37,14 @@ class Asia extends Component {
                 </div>
               </div>
             </div>
+            {/* ukoliko nema aktivnog usera, renderuj login i signup */}
             {user === null ? (
-              <div className="logovanje">
+              <div className="loging">
                 <Link to="/login">Log in</Link>
                 <Link to="/register">Sign up</Link>
               </div>
             ) : (
-              <div className="logovanje2">
+              <div className="loging2">
                 <div className="username">
                   <strong>{user.user}</strong>
                 </div>
@@ -54,21 +55,9 @@ class Asia extends Component {
             )}
           </div>
         </div>
-        <Header />
-        <hr />
-        <div className="header-culture">
-          <div className="title-culture">
-            <h1>Chinese art</h1>
-          </div>
-          <div className="headerImg-asia"></div>
-        </div>
-
-        <ApiCollectionAsia />
-        <hr />
-        <Footer />
       </div>
     );
   }
 }
 
-export default Asia;
+export default Menu;

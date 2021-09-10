@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 import "./Main.css";
-import Header from "./Header.js";
-import Events from "./Events.js";
+import Header from "../Header/Header.js";
+import Events from "../Events/Events.js";
 
 class Main extends Component {
   render() {

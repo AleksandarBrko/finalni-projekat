@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import "./Egypt.css";
-import ApiCollectionEgypt from "./ApiCollectionEgypt.js";
-import Footer from "./Footer";
-import Header from "./Header";
+import ApiCollectionEgypt from "../ApiCollections/ApiCollectionEgypt.js";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 class Egypt extends Component {
   render() {
@@ -17,7 +17,7 @@ class Egypt extends Component {
     return (
       <div className="egypt-container">
         <div className="navbar">
-          <Link to="/">Home</Link>
+          <Link to="/mainpage">Home</Link>
           <div className="dropdown">
             <button className="dropbtn">
               Collection &nbsp;

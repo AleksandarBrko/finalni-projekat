@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 import "./Register.css";
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 class Register extends Component {
   render() {
