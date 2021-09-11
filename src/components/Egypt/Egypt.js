@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import "./Egypt.css";
+
 import ApiCollectionEgypt from "../ApiCollections/ApiCollectionEgypt.js";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";

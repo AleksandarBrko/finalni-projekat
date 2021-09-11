@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./Footer.css";
+
 import Facebook from "./icons/fb.png";
 import Instagram from "./icons/insta.png";
 import Twitter from "./icons/twitter.png";

@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import "./AboutUs.css";
-
 class AboutUs extends Component {
   render() {
     return (
@@ -13,6 +11,9 @@ class AboutUs extends Component {
           Your support funds groundbreaking research and remarkable education
           programs. And it ensures that our doors stay open for explorers of
           every age.
+        </div>
+        <div className="tekst">
+          <p>autopilot</p>
         </div>
       </div>
     );

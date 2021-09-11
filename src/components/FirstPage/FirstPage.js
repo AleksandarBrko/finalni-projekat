@@ -6,6 +6,10 @@ import Login from "../Login/Login";
 import MainPage from "../MainPage/MainPage";
 import Register from "../Register/Register";
 
+
+
+
+
 class FirstPage extends Component {
   render() {
     let user = JSON.parse(localStorage.getItem("loggedInUser"));
@@ -17,6 +21,7 @@ class FirstPage extends Component {
     return (
       <div className="firstPage-container">
         <Login />
+        <div className="tekst">tekst</div>
       </div>
     );
   }

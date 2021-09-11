@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import "./App.css";
+import "./App.scss";
 import Main from "./components/Main/Main";
 import Collection from "./components/Collection/Collection";
 import CollectionTitle from "./components/CollectionTitle/CollectionTitle";
@@ -33,17 +33,19 @@ class App extends Component {
           <Switch>
             <Route exact path="/">
               <FirstPage>
-                <div className="stick">
-                  <Menu />
-                </div>
-                <Main />
-                <CollectionTitle />
-                <Collection />
-                <AboutUs />
-                <hr />
-                <ContactForm />
-                <hr />
-                <Footer />
+                <MainPage>
+                  <div className="stick">
+                    <Menu />
+                  </div>
+                  <Main />
+                  <CollectionTitle />
+                  <Collection />
+                  <AboutUs />
+                  <hr/>
+                  <ContactForm />
+                  <hr />
+                  <Footer />
+                </MainPage>
               </FirstPage>
             </Route>
 

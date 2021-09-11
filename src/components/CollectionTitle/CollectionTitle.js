@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./CollectionTitle.css";
+
 
 class CollectionTitle extends Component {
   render() {

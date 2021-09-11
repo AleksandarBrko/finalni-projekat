@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./Header.css";
+
 
 import PantheonIcon from "./icons/pantheon.png";
 

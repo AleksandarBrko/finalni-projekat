@@ -1,0 +1,36 @@
+.egypt-container {
+  width: 100%;
+}
+
+.header-img-egypt {
+  margin: 0 auto;
+  width: 80%;
+  height: 400px;
+  border: 1px solid greenyellow;
+  background: {
+    image: url(../images/EgyptCover.png);
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+  }
+}
+
+.filter-culture {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.header-culture {
+  text-align: center;
+  font-size: 2em;
+  color: goldenrod;
+  text-shadow: 1px 1px green;
+}
+@media only screen and (max-width: 600px) {
+  .header-culture {
+    font-size: 1em;
+  }
+}
