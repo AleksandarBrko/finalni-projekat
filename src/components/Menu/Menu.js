@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "font-awesome/css/font-awesome.min.css";
 
-
 class Menu extends Component {
   render() {
     let user = JSON.parse(localStorage.getItem("loggedInUser"));

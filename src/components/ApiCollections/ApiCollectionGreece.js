@@ -199,17 +199,17 @@ class ApiCollectionGreece extends Component {
               </div>
             </div>
           </div>
-          <div className="list-row headRow">
-            <div className="row-item headRow">Title</div>
-            <div className="row-item headRow second">Collection</div>
-            <div className="row-item headRow third">Type</div>
-            <div className="row-item imagesRow">Image</div>
+          <div className="listRow-head">
+            <div className="row-item">Title</div>
+            <div className="row-item">Collection</div>
+            <div className="row-item">Type</div>
+            <div className="row-item">Image</div>
           </div>
           {this.state.pageList.map((item) => (
-            <div className="list-row data">
-              <div className="row-item title">{item.title}</div>
+            <div className="listRow-data">
+              <div className="row-item first">{item.title}</div>
               <div className="row-item second">{item.collection}</div>
-              <div className="row-item type">{item.type}</div>
+              <div className="row-item third">{item.type}</div>
               {/* Ukoliko nema slika, da prikaze samo prazan div i da ne pukne API */}
               {item.images !== null ? (
                 <div className="row-item images">

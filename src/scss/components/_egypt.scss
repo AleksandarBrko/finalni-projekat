@@ -1,6 +1,5 @@
 .egypt-container {
   width: 100%;
-
   .headerImg-egypt {
     margin: 0 auto;
     width: 80%;
@@ -8,7 +7,7 @@
     border: 1px solid greenyellow;
     background: {
       image: url(../images/EgyptCover.png);
-      size: cover;
+      size: 100% 100%;
       repeat: no-repeat;
       position: center;
     }

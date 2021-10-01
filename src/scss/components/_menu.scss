@@ -1,49 +1,54 @@
+.navigation {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
 .navbar {
   overflow: hidden;
   background-color: #265077;
   font-family: Arial;
-  .loging {
-    float: right;
-    padding-right: 20px;
-  }
+
   a {
     float: left;
     font-size: 16px;
     color: white;
-    padding: 14px 16px;
     text: {
-      align: center;
       decoration: none;
+      align: center;
+    }
+    padding: 14px 16px;
+    &:hover {
+      background-color: goldenrod;
     }
   }
+
   .dropdown {
     float: left;
     overflow: hidden;
+    &:hover .dropdown-content {
+      display: block;
+    }
+
     .dropbtn {
       font-size: 16px;
       border: none;
-      outline: none;
       color: white;
       padding: 14px 16px;
       background-color: inherit;
-      font: inherit;
       margin: 0;
+      &:hover {
+        background-color: goldenrod;
+      }
     }
+
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #f9f9f9;
       width: 20%;
       left: 0;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
-    }
-    .row {
-      &:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
+
       .column {
         float: left;
         width: 400px;
@@ -51,21 +56,18 @@
         background-color: #ccc;
         height: 250px;
         text-align: center;
+
         a {
           float: none;
           color: black;
           padding: 16px;
-          display: block;
           text: {
-            align: left;
             decoration: none;
+            align: left;
           }
-          border: {
-            color: #265077;
-            width: 1px;
-            style: solid;
-            radius: 20px;
-          }
+          display: block;
+          border: 1px solid #265077;
+          border-radius: 20px;
           margin-bottom: 10px;
           &:hover {
             background-color: #265077;
@@ -75,30 +77,32 @@
       }
     }
   }
+
+  .loging {
+    float: right;
+    padding-right: 20px;
+  }
+
   .loging2 {
     display: flex;
     float: right;
     font-size: 16px;
     color: white;
+    text-align: center;
     padding: 14px 16px;
-    text: {
-      align: center;
-      decoration: none;
+    text-decoration: none;
+
+    .username {
+      color: goldenrod;
+      padding-right: 10px;
     }
-  }
-  .username {
-    color: goldenrod;
-    padding-right: 10px;
   }
 }
 
-// .navbar a:hover,
-// .dropdown:hover .dropbtn {
-//   background-color: goldenrod;
-// }
-
-// .dropdown:hover .dropdown-content {
-//   display: block;
+// .row:after {
+//   content: "";
+//   display: table;
+//   clear: both;
 // }
 
 @media only screen and (max-width: 600px) {

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import "./Asia.css";
 import ApiCollectionAsia from "../ApiCollections/ApiCollectionAsia.js";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -16,7 +15,7 @@ class Asia extends Component {
     };
     return (
       <div className="asia-container">
-        <div navigation>
+        <div className="navigation">
           <div className="navbar">
             <Link to="/mainpage">Home</Link>
             <div className="dropdown">
@@ -38,12 +37,12 @@ class Asia extends Component {
               </div>
             </div>
             {user === null ? (
-              <div className="logovanje">
+              <div className="loging">
                 <Link to="/login">Log in</Link>
                 <Link to="/register">Sign up</Link>
               </div>
             ) : (
-              <div className="logovanje2">
+              <div className="loging2">
                 <div className="username">
                   <strong>{user.user}</strong>
                 </div>
