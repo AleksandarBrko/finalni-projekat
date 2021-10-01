@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
-import "./Login.css";
-
 class Login extends Component {
   render() {
     let registeredUsers = JSON.parse(localStorage.getItem("registeredUsers"));
