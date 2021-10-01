@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-
 import ApiCollectionEgypt from "../ApiCollections/ApiCollectionEgypt.js";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
@@ -56,10 +55,11 @@ class Egypt extends Component {
           <div className="title-culture">
             <h1>Egyptian and Ancient Near Eastern Art</h1>
           </div>
-          <div className="header-img-egypt"></div>
+          <div className="headerImg-egypt"></div>
         </div>
 
         <ApiCollectionEgypt />
+
         <hr />
         <Footer />
       </div>

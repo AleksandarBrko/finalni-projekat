@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./ApiCollection.css";
+
 
 class ApiCollectionEgypt extends Component {
   constructor(props) {

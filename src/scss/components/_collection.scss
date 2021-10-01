@@ -1,0 +1,84 @@
+.collection-container {
+  display: flex;
+  flex: {
+    direction: row;
+    wrap: wrap;
+  }
+  justify-content: space-between;
+
+  .collection-egypt {
+    width: 30%;
+    height: 400px;
+    border: 2px solid goldenrod;
+    background: {
+      image: url(../images/collectionBackgroundEgypt.jpg);
+      size: cover;
+      repeat: no-repeat;
+      position: center;
+    }
+    position: relative;
+  }
+
+  .collection-greece {
+    width: 30%;
+    height: 400px;
+    border: 2px solid goldenrod;
+    background: {
+      image: url(../images/collectionBackgroundGreece.jpg);
+      size: cover;
+      repeat: no-repeat;
+      position: center;
+    }
+    position: relative;
+  }
+  .collection-asia {
+    width: 30%;
+    height: 400px;
+    border: 2px solid goldenrod;
+    background: {
+      image: url(../images/collectionBackgroundAsia.jpg);
+      size: cover;
+      repeat: no-repeat;
+      position: center;
+    }
+    position: relative;
+  }
+
+  .collection-title {
+    visibility: hidden;
+    width: 20%;
+    color: goldenrod;
+    text: {
+      shadow: 4px 4px #022140;
+      align: center;
+    }
+    font-size: 3em;
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+.collection-egypt:hover .collection-title {
+  visibility: visible;
+}
+
+.collection-greece:hover .collection-title {
+  visibility: visible;
+}
+
+.collection-asia:hover .collection-title {
+  visibility: visible;
+}
+@media only screen and (max-width: 600px) {
+  .collection-container {
+    display: flex;
+    flex: {
+      direction: column;
+      wrap: wrap;
+    }
+  }
+  .collection {
+    margin-top: 10px;
+    width: 100%;
+  }
+}

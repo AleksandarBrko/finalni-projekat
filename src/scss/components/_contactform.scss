@@ -1,0 +1,116 @@
+.contactform-container {
+  width: 100%;
+  margin-top: 100px;
+  color: white;
+  .contactForm-title {
+    text-align: center;
+  }
+  .section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    .contForm {
+      width: 30%;
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        justify-content: space-between;
+        color: white;
+        input {
+          background-color: #265077;
+        }
+        textarea {
+          background-color: #265077;
+        }
+        .nameInput {
+          display: flex;
+          flex-direction: column;
+          width: 49%;
+          height: 100px;
+          font-size: 2em;
+          input {
+            height: 2.75em;
+            color: white;
+          }
+        }
+        .emailInput {
+          display: flex;
+          flex-direction: column;
+          width: 49%;
+          font-size: 2em;
+          input {
+            height: 2.75em;
+            color: white;
+          }
+        }
+
+        .fieldInput {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          margin-top: 20px;
+          font-size: 2em;
+          list-style-type: none;
+          textarea {
+            color: white;
+          }
+        }
+        .sendMessage {
+          list-style-type: none;
+          margin-top: 20px;
+          input {
+            color: white;
+            height: 2.75em;
+          }
+        }
+      }
+    }
+    .contactForm-info {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      .info {
+        display: block;
+        padding-left: 50px;
+        h3 {
+          font-size: 1.5em;
+        }
+        a {
+          text-decoration: none;
+          color: white;
+        }
+        .email {
+          display: block;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .contForm {
+    width: 100%;
+  }
+
+  .contactForm-info {
+    width: 100%;
+  }
+  .hr hr {
+    border: 1px solid white;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .hr hr {
+    display: none;
+  }
+}

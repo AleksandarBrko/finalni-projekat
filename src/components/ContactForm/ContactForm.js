@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import "./ContactForm.css";
+// import "./ContactForm.css";
 
 class ContactForm extends Component {
   render() {

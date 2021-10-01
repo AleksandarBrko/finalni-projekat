@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import "./App.scss";
+// import "./App.scss";
 import Main from "./components/Main/Main";
 import Collection from "./components/Collection/Collection";
 import CollectionTitle from "./components/CollectionTitle/CollectionTitle";
@@ -41,7 +41,7 @@ class App extends Component {
                   <CollectionTitle />
                   <Collection />
                   <AboutUs />
-                  <hr/>
+                  <hr />
                   <ContactForm />
                   <hr />
                   <Footer />

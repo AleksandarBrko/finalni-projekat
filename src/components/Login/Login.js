@@ -41,7 +41,7 @@ class Login extends Component {
         <div></div>
         <Header />
         <hr />
-        <div className="loginForm-header">LOG IN FORM</div>
+        <div className="loginForm-header">LOG IN</div>
         <div className="login-wrapp">
           <div className="login-form" method="POST" action="sucess">
             <div className="log-user">

@@ -1,6 +1,6 @@
 @import "components/firstpage";
 @import "components/aboutus";
-@import "components/register";
+
 @import "helper/button";
 @import "components/login";
 @import "components/apicollection";
@@ -17,3 +17,14 @@
 @import "components/menu";
 @import "components/greeting";
 @import "helper/navmenu";
+@import "helper/collection";
+@import "helper/eventA";
+
+hr {
+  border: 1px solid goldenrod;
+}
+.stick {
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}

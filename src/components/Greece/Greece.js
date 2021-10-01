@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import "./Greece.css";
+
 import ApiCollectionGreece from "../ApiCollections/ApiCollectionGreece.js";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";

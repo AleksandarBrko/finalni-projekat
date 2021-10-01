@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import "./Register.css";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
@@ -30,7 +29,7 @@ class Register extends Component {
       <div className="register-container">
         <Header />
         <hr />
-        <div className="loginForm-header">SIGN UP FORM</div>
+        <div className="loginForm-header">SIGN UP</div>
         <div className="login-form">
           <div className="log-user">
             <label>Username</label>
@@ -40,7 +39,9 @@ class Register extends Component {
             <label>Password</label>
             <input type="text" id="password" />
           </div>
-          <button onClick={() => registerUser()}>Sign Up</button>
+          <div className="log-button">
+            <button onClick={() => registerUser()}>Sign Up</button>
+          </div>
         </div>
         <hr />
         <Footer />

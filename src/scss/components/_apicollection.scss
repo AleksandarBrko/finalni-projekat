@@ -1,0 +1,192 @@
+/* stilizovanje loadinga */
+.api-loading {
+  color: goldenrod;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.apiList-container {
+  width: 90%;
+  margin: 50px auto;
+  .filter-culture {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+
+    .filter-collection {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 500px;
+      .collection-label {
+        color: goldenrod;
+        font-size: 2em;
+      }
+      .collection-labelF {
+        color: goldenrod;
+      }
+      .filter-select {
+        padding: 10px 0;
+        margin-bottom: 40px;
+        .filter-option {
+          text-align: center;
+          width: 150px;
+          color: white;
+          background-color: #265077;
+          border-radius: 5px;
+          font-weight: bold;
+          margin: 10px 0;
+          &:hover {
+            background-color: goldenrod;
+            color: #022140;
+          }
+        }
+      }
+    }
+    .filter-type {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 500px;
+      .type-label {
+        color: goldenrod;
+        font-size: 2em;
+      }
+      .type-labelF {
+        color: goldenrod;
+      }
+      .filter-select {
+        padding: 10px 0;
+        margin-bottom: 40px;
+        .filter-option {
+          text-align: center;
+          width: 150px;
+          color: white;
+          background-color: #265077;
+          border-radius: 5px;
+          font-weight: bold;
+          margin: 10px 0;
+          &:hover {
+            background-color: goldenrod;
+            color: #022140;
+          }
+        }
+      }
+    }
+  }
+  .list-row {
+    display: flex;
+    .headRow {
+      font-size: 2em;
+      color: goldenrod;
+      border: 1px solid goldenrod;
+    }
+    .title {
+      color: goldenrod;
+    }
+    .row-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+      height: 50px;
+      border: 1px solid white;
+      overflow: hidden;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+    .imagesRow {
+      font-size: 2em;
+      color: goldenrod;
+      border: 1px solid goldenrod;
+    }
+    .images {
+      text-align: center;
+    }
+  }
+}
+
+.header-culture {
+  text-align: center;
+  font-size: 2em;
+  color: goldenrod;
+  text-shadow: 1px 1px green;
+}
+
+/* div za paginaciju */
+.pagination {
+  display: flex;
+  width: 10%;
+  justify-content: center;
+  margin: 50px auto;
+  button {
+    background-color: goldenrod;
+    border: none;
+    color: black;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .current-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid goldenrod;
+    width: 50px;
+    margin: 0 10px;
+    padding: 0 5px;
+    font-size: 1.2em;
+  }
+}
+
+/* trenutna stranica */
+
+@media only screen and (max-width: 600px) {
+  .filter-option {
+    font-weight: 100;
+  }
+  .collection-label {
+    font-size: 1.5em;
+  }
+  .type-label {
+    font-size: 1.5em;
+  }
+  .list-row {
+    width: 100%;
+  }
+  .row-item.title {
+    width: 50%;
+    font-size: 15px;
+  }
+  .row-item.images {
+    width: 50%;
+    font-size: 8px;
+  }
+  .row-item.second {
+    display: none;
+  }
+  .row-item.type {
+    display: none;
+  }
+  .row-item.headRow.second {
+    display: none;
+  }
+  .row-item.headRow.third {
+    display: none;
+  }
+  .row-item.headRow {
+    width: 50%;
+  }
+  .row-item.imagesRow {
+    width: 50%;
+  }
+}

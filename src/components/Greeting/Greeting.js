@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
-import "./Greeting.css";
+// import "./Greeting.css";
 
 class Greeting extends Component {
   render() {

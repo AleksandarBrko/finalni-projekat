@@ -12,9 +12,6 @@ class AboutUs extends Component {
           programs. And it ensures that our doors stay open for explorers of
           every age.
         </div>
-        <div className="tekst">
-          <p>autopilot</p>
-        </div>
       </div>
     );
   }

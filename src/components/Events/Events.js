@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import "./Events.css";
+// import "./Events.css";
 
 class Events extends Component {
   render() {
@@ -14,14 +14,14 @@ class Events extends Component {
           </div>
         </div>
         <div className="side-event">
-          <div className="small-event first-image">
+          <div className="smallEvent-first">
             <a href="https://greekreporter.com/2021/06/06/top-ten-most-spectacular-greek-archaeological-discoveries-of-2020/"></a>
             <div className="announce">
               <div className="ann1">News</div>
               <div className="ann2">Top Ten Most Spectacular Greek...</div>
             </div>
           </div>
-          <div className="small-event second-image">
+          <div className="smallEvent-second">
             <a href="https://www.sixthtone.com/news/1007903/the-mysterious-ancient-city-thats-rewriting-chinese-history"></a>
             <div className="announce">
               <div className="ann1">News</div>

@@ -5,6 +5,7 @@
   align-items: center;
   width: 500px;
 }
+
 .filter-type {
   display: flex;
   flex-direction: column;

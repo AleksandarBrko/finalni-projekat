@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "font-awesome/css/font-awesome.min.css";
-import "./Menu.css";
+
 
 class Menu extends Component {
   render() {

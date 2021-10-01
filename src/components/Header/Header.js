@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-
-
 import PantheonIcon from "./icons/pantheon.png";
 
 class Header extends Component {
